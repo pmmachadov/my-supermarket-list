@@ -1,12 +1,14 @@
+// src/views/ProductList.jsx
 import React from 'react';
-import styles from './ProductList.module.css';
 import ProductItem from './ProductItem';
 import { Grid, Typography } from '@mui/material';
 
 const ProductList = React.forwardRef(
-    ({ products, onIncrease, onDecrease, selectedCategoryId }, ref) => {
+    ({ products, onIncrease, onDecrease, selectedCategory, searchQuery }, ref) => {
         const filteredProducts = products.filter(
-            (product) => product.categoryId === selectedCategoryId
+            (product) =>
+                (selectedCategory === null || product.category === selectedCategory) &&
+                product.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
         return (
@@ -24,7 +26,7 @@ const ProductList = React.forwardRef(
                         )) }
                     </Grid>
                 ) : (
-                    <Typography variant="body1">No products in this category.</Typography>
+                    <Typography variant="body1">No products found.</Typography>
                 ) }
             </div>
         );

@@ -1,17 +1,15 @@
+// src/App.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import initialProducts from './models/ProductModel';
-import initialCategories from './models/CategoryModel';
 import {
   increaseQuantity,
   decreaseQuantity,
   addProduct,
 } from './controllers/ProductController';
-import { addCategory } from './controllers/CategoryController';
 import ProductList from './views/ProductList';
 import CategoryMenu from './views/CategoryMenu';
 import {
   Container,
-  Button,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -20,8 +18,13 @@ import {
   Fab,
   useMediaQuery,
   useTheme,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
 } from '@mui/material';
-import { Add as AddIcon, GetApp as GetAppIcon } from '@mui/icons-material';
+import { Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import styles from './App.module.css';
@@ -32,22 +35,12 @@ function App() {
     return savedProducts ? JSON.parse(savedProducts) : initialProducts;
   });
 
-  const [categories, setCategories] = useState(() => {
-    const savedCategories = localStorage.getItem('categories');
-    return savedCategories ? JSON.parse(savedCategories) : initialCategories;
-  });
-
-  const [selectedCategoryId, setSelectedCategoryId] = useState(
-    categories.length > 0 ? categories[0].id : null
-  );
+  const [selectedCategory, setSelectedCategory] = useState(null); // Start with 'All' categories
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     localStorage.setItem('products', JSON.stringify(products));
   }, [products]);
-
-  useEffect(() => {
-    localStorage.setItem('categories', JSON.stringify(categories));
-  }, [categories]);
 
   const handleIncrease = (id) => {
     setProducts((prevProducts) => {
@@ -63,17 +56,9 @@ function App() {
     });
   };
 
-  const handleSelectCategory = (categoryId) => {
-    setSelectedCategoryId(categoryId);
-  };
-
-  const handleAddCategory = (categoryName) => {
-    const newCategory = {
-      id: categories.length > 0 ? categories[categories.length - 1].id + 1 : 1,
-      name: categoryName,
-    };
-    setCategories((prevCategories) => addCategory(prevCategories, newCategory));
-    setSelectedCategoryId(newCategory.id);
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+    setSearchQuery(''); // Reset search when category changes
   };
 
   const [openAddProductDialog, setOpenAddProductDialog] = useState(false);
@@ -81,6 +66,7 @@ function App() {
     name: '',
     quantity: 0,
     image: '',
+    category: '',
   });
 
   const handleOpenAddProductDialog = () => {
@@ -89,7 +75,7 @@ function App() {
 
   const handleCloseAddProductDialog = () => {
     setOpenAddProductDialog(false);
-    setNewProductData({ name: '', quantity: 0, image: '' });
+    setNewProductData({ name: '', quantity: 0, image: '', category: '' });
   };
 
   const handleAddProduct = () => {
@@ -98,7 +84,7 @@ function App() {
       name: newProductData.name,
       quantity: parseInt(newProductData.quantity, 10),
       image: newProductData.image,
-      categoryId: selectedCategoryId,
+      category: newProductData.category,
     };
     setProducts((prevProducts) => addProduct(prevProducts, newProduct));
     handleCloseAddProductDialog();
@@ -113,7 +99,12 @@ function App() {
 
   const handleDownloadPDF = () => {
     const input = productListRef.current;
-    html2canvas(input, { scale: 2, useCORS: true })
+    html2canvas(input, {
+      scale: 2,
+      useCORS: true,
+      allowTaint: false,
+      logging: true,
+    })
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'mm', 'a4');
@@ -135,102 +126,136 @@ function App() {
   return (
     <div className={ styles.appContainer }>
       <CategoryMenu
-        categories={ categories }
-        selectedCategoryId={ selectedCategoryId }
+        products={ products }
+        selectedCategory={ selectedCategory }
         onSelectCategory={ handleSelectCategory }
-        onAddCategory={ handleAddCategory }
       />
       <main className={ styles.mainContent }>
-        <div className={ styles.toolbar } />
+        <AppBar position="fixed" className={ styles.appBarContent }>
+          <Toolbar>
+            { isMobile && (
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={ handleOpenAddProductDialog }
+              >
+                <AddIcon />
+              </IconButton>
+            ) }
+            <Typography variant="h6" className={ styles.title }>
+              { selectedCategory || 'All Products' }
+            </Typography>
+            <div className={ styles.search }>
+              <div className={ styles.searchIcon }>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search products…"
+                classes={ {
+                  root: styles.inputRoot,
+                  input: styles.inputInput,
+                } }
+                value={ searchQuery }
+                onChange={ (e) => setSearchQuery(e.target.value) }
+                inputProps={ { 'aria-label': 'search' } }
+              />
+            </div>
+            { !isMobile && (
+              <>
+                <IconButton
+                  color="inherit"
+                  onClick={ handleOpenAddProductDialog }
+                >
+                  <AddIcon />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                  onClick={ handleDownloadPDF }
+                >
+                  <GetAppIcon />
+                </IconButton>
+              </>
+            ) }
+          </Toolbar>
+        </AppBar>
         <Container>
-          { !isMobile && (
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={ handleOpenAddProductDialog }
-              style={ { marginBottom: '20px', marginRight: '10px' } }
-              startIcon={ <AddIcon /> }
-            >
-              Add Product
-            </Button>
-          ) }
-          { !isMobile && (
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={ handleDownloadPDF }
-              style={ { marginBottom: '20px' } }
-              startIcon={ <GetAppIcon /> }
-            >
-              Download PDF
-            </Button>
-          ) }
+          <div className={ styles.toolbar } />
           <ProductList
             products={ products }
             onIncrease={ handleIncrease }
             onDecrease={ handleDecrease }
-            selectedCategoryId={ selectedCategoryId }
+            selectedCategory={ selectedCategory }
+            searchQuery={ searchQuery }
             ref={ productListRef }
           />
           { isMobile && (
-            <Fab
-              color="primary"
-              aria-label="add"
-              className={ styles.fab }
-              onClick={ handleOpenAddProductDialog }
-            >
-              <AddIcon />
-            </Fab>
-          ) }
-          { isMobile && (
-            <Fab
-              color="secondary"
-              aria-label="download"
-              className={ styles.fabDownload }
-              onClick={ handleDownloadPDF }
-            >
-              <GetAppIcon />
-            </Fab>
+            <>
+              <Fab
+                color="primary"
+                aria-label="add"
+                className={ styles.fab }
+                onClick={ handleOpenAddProductDialog }
+              >
+                <AddIcon />
+              </Fab>
+              <Fab
+                color="secondary"
+                aria-label="download"
+                className={ styles.fabDownload }
+                onClick={ handleDownloadPDF }
+              >
+                <GetAppIcon />
+              </Fab>
+            </>
           ) }
         </Container>
+        <Dialog open={ openAddProductDialog } onClose={ handleCloseAddProductDialog }>
+          <DialogTitle>Add New Product</DialogTitle>
+          <DialogContent>
+            <TextField
+              margin="dense"
+              label="Product Name"
+              name="name"
+              fullWidth
+              value={ newProductData.name }
+              onChange={ handleNewProductDataChange }
+            />
+            <TextField
+              margin="dense"
+              label="Quantity"
+              name="quantity"
+              type="number"
+              fullWidth
+              value={ newProductData.quantity }
+              onChange={ handleNewProductDataChange }
+            />
+            <TextField
+              margin="dense"
+              label="Image Path"
+              name="image"
+              fullWidth
+              value={ newProductData.image }
+              onChange={ handleNewProductDataChange }
+              helperText="Provide the path to the product image (e.g., images/product.jpg)"
+            />
+            <TextField
+              margin="dense"
+              label="Category"
+              name="category"
+              fullWidth
+              value={ newProductData.category }
+              onChange={ handleNewProductDataChange }
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={ handleCloseAddProductDialog }>Cancel</Button>
+            <Button onClick={ handleAddProduct } color="primary">
+              Add
+            </Button>
+          </DialogActions>
+        </Dialog>
       </main>
-      <Dialog open={ openAddProductDialog } onClose={ handleCloseAddProductDialog }>
-        <DialogTitle>Add New Product</DialogTitle>
-        <DialogContent>
-          <TextField
-            margin="dense"
-            label="Product Name"
-            name="name"
-            fullWidth
-            value={ newProductData.name }
-            onChange={ handleNewProductDataChange }
-          />
-          <TextField
-            margin="dense"
-            label="Quantity"
-            name="quantity"
-            type="number"
-            fullWidth
-            value={ newProductData.quantity }
-            onChange={ handleNewProductDataChange }
-          />
-          <TextField
-            margin="dense"
-            label="Image URL"
-            name="image"
-            fullWidth
-            value={ newProductData.image }
-            onChange={ handleNewProductDataChange }
-            helperText="Provide a URL or path to the image"
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={ handleCloseAddProductDialog }>Cancel</Button>
-          <Button onClick={ handleAddProduct } color="primary">
-            Add
-          </Button>
-        </DialogActions>
-      </Dialog>
     </div>
   );
 }

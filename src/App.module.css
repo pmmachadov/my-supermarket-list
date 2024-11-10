@@ -1,14 +1,62 @@
+/* src/App.module.css */
+
 .appContainer {
     display: flex;
 }
 
 .mainContent {
     flex-grow: 1;
-    padding: 20px;
+    padding-top: 64px;
+    /* Adjust for AppBar height */
+}
+
+.appBarContent {
+    z-index: 1300;
+    margin-left: 240px;
+    /* Width of the drawer */
+}
+
+@media (max-width: 600px) {
+    .appBarContent {
+        margin-left: 0;
+    }
 }
 
 .toolbar {
     min-height: 64px;
+    /* Adjust according to AppBar height */
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.search {
+    position: relative;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-left: 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.searchIcon {
+    padding: 8px;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputRoot {
+    color: inherit;
+}
+
+.inputInput {
+    padding: 8px 8px 8px 40px;
+    width: 100%;
 }
 
 .fab {

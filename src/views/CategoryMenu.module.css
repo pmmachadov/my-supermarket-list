@@ -1,3 +1,4 @@
+/* src/views/CategoryMenu.module.css */
 .drawer {
     width: 240px;
     flex-shrink: 0;
@@ -7,24 +8,10 @@
     width: 240px;
 }
 
-.appBar {
-    z-index: 1300;
-}
-
 .nested {
     padding-left: 32px;
 }
 
-.addCategory {
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.addCategory .MuiTextField-root {
-    flex: 1;
-}
-
-.addCategory .MuiIconButton-root {
-    margin-left: 8px;
+.appBar {
+    z-index: 1300;
 }

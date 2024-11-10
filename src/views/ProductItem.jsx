@@ -1,3 +1,4 @@
+// src/views/ProductItem.jsx
 import React from 'react';
 import styles from './ProductItem.module.css';
 import {
@@ -18,6 +19,10 @@ const ProductItem = ({ product, onIncrease, onDecrease }) => {
                 height="140"
                 image={ product.image }
                 alt={ product.name }
+                onError={ (e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://via.placeholder.com/140';
+                } }
             />
             <CardContent>
                 <Typography variant="h6" component="div">
