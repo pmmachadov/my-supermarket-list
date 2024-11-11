@@ -3,43 +3,42 @@ import styles from './ProductItem.module.css';
 import {
     Card,
     CardMedia,
-    CardContent,
     Typography,
     IconButton,
-    CardActions,
 } from '@mui/material';
 import { Add, Remove } from '@mui/icons-material';
 
 const ProductItem = ({ product, onIncrease, onDecrease }) => {
-
     const encodedImageUrl = encodeURI(product.image);
 
     return (
         <Card className={ styles.card }>
             <CardMedia
                 component="img"
-                height="140"
+                className={ styles.cardMedia }
                 image={ encodedImageUrl }
                 alt={ product.name }
                 onError={ (e) => {
                     e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/140';
+                    e.target.src = 'https://via.placeholder.com/300';
                 } }
             />
-            <CardContent>
-                <Typography variant="h6" component="div">
+            <div className={ styles.overlay }>
+                <Typography variant="h6" className={ styles.productName }>
                     { product.name }
                 </Typography>
-            </CardContent>
-            <CardActions className={ styles.actions }>
-                <IconButton onClick={ () => onDecrease(product.id) }>
-                    <Remove />
-                </IconButton>
-                <Typography variant="body1">{ product.quantity }</Typography>
-                <IconButton onClick={ () => onIncrease(product.id) }>
-                    <Add />
-                </IconButton>
-            </CardActions>
+                <div className={ styles.actions }>
+                    <IconButton onClick={ () => onDecrease(product.id) }>
+                        <Remove style={ { color: 'white' } } />
+                    </IconButton>
+                    <Typography variant="body1" style={ { color: 'white' } }>
+                        { product.quantity }
+                    </Typography>
+                    <IconButton onClick={ () => onIncrease(product.id) }>
+                        <Add style={ { color: 'white' } } />
+                    </IconButton>
+                </div>
+            </div>
         </Card>
     );
 };

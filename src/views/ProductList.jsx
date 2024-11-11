@@ -14,9 +14,9 @@ const ProductList = React.forwardRef(
         return (
             <div ref={ ref }>
                 { filteredProducts.length > 0 ? (
-                    <Grid container spacing={ 2 }>
+                    <Grid container spacing={ 2 } justifyContent="center"> {/* Reduce spacing */ }
                         { filteredProducts.map((product) => (
-                            <Grid item xs={ 12 } sm={ 6 } md={ 4 } key={ product.id }>
+                            <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } key={ product.id }>
                                 <ProductItem
                                     product={ product }
                                     onIncrease={ onIncrease }
