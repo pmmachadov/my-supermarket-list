@@ -1,4 +1,3 @@
-// src/views/ProductList.jsx
 import React from 'react';
 import ProductItem from './ProductItem';
 import { Grid, Typography } from '@mui/material';
@@ -14,7 +13,7 @@ const ProductList = React.forwardRef(
         return (
             <div ref={ ref }>
                 { filteredProducts.length > 0 ? (
-                    <Grid container spacing={ 2 } justifyContent="center"> {/* Reduce spacing */ }
+                    <Grid container spacing={ 2 } justifyContent="center">
                         { filteredProducts.map((product) => (
                             <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } key={ product.id }>
                                 <ProductItem

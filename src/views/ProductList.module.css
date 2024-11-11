@@ -1,6 +1,5 @@
 .card {
     width: 100%;
-    /*Aseguraqueocupeel100%delcontenedorGrid*/
     height: 300px;
     display: flex;
     flex-direction: column;

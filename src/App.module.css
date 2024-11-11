@@ -2,42 +2,49 @@
 
 .appContainer {
     display: flex;
+    flex-direction: column;
 }
 
 .mainContent {
     flex-grow: 1;
     padding-top: 64px;
-    /* Adjust for AppBar height */
+    width: 100%;
 }
 
 .appBarContent {
     z-index: 1300;
-    margin-left: 240px;
-    /* Width of the drawer */
-}
-
-@media (max-width: 600px) {
-    .appBarContent {
-        margin-left: 0;
-    }
 }
 
 .toolbar {
     min-height: 64px;
-    /* Adjust according to AppBar height */
 }
 
 .title {
     flex-grow: 1;
+    text-align: center;
+}
+
+.menuButton {
+    margin-right: 16px;
+}
+
+.productContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .search {
     position: relative;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.15);
-    margin-left: 0;
     width: 100%;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .searchIcon {
@@ -57,16 +64,4 @@
 .inputInput {
     padding: 8px 8px 8px 40px;
     width: 100%;
-}
-
-.fab {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-}
-
-.fabDownload {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
 }
