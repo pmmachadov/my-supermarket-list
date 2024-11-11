@@ -99,7 +99,7 @@ const initialProducts = [
         "id": 17,
         "name": "Vaso de golosinas Halloween",
         "image": "images/Vaso_de_golosinas_Halloween.jpg",
-        "category": "Golosinas"
+        "category": "Dulces y postres"
     },
     {
         "id": 18,
@@ -117,13 +117,13 @@ const initialProducts = [
         "id": 20,
         "name": "Vino tinto Casón Histórico",
         "image": "images/Vino_tinto_Casón_Histórico.jpg",
-        "category": "Bebidas alcohólicas"
+        "category": "Bebidas"
     },
     {
         "id": 21,
         "name": "Vino-dulce-Blue-moscato-VCristina-espumoso",
         "image": "images/Vino-dulce-Blue-moscato-VCristina-espumoso.jpg",
-        "category": "Dulces y postres"
+        "category": "Bebidas"
     },
     {
         "id": 22,
@@ -135,7 +135,7 @@ const initialProducts = [
         "id": 23,
         "name": "12 Mini saladas",
         "image": "images/12_Mini_saladas.jpg",
-        "category": "Alimentos"
+        "category": "Panadería y pastelería"
     },
     {
         "id": 24,
@@ -165,13 +165,13 @@ const initialProducts = [
         "id": 28,
         "name": "Agua destilada Bosque Verde",
         "image": "images/Agua_destilada_Bosque_Verde.jpg",
-        "category": "Agua y refrescos"
+        "category": "Limpieza"
     },
     {
         "id": 29,
         "name": "Agua Micelar cara y ojos Facial Clean Deliplus todo tipo de piel",
         "image": "images/Agua_Micelar_cara_y_ojos_Facial_Clean_Deliplus_todo_tipo_de_piel.jpg",
-        "category": "Agua y refrescos"
+        "category": "Higiene"
     },
     {
         "id": 30,
@@ -225,7 +225,7 @@ const initialProducts = [
         "id": 38,
         "name": "Barquillos rellenos de crema turrón Hacendado",
         "image": "images/Barquillos_rellenos_de_crema_turrón_Hacendado.jpg",
-        "category": "Golosinas"
+        "category": "Dulces y postres"
     },
     {
         "id": 39,
@@ -261,7 +261,7 @@ const initialProducts = [
         "id": 44,
         "name": "Batido de chocolate ColaCao Energy",
         "image": "images/Batido_de_chocolate_ColaCao_Energy.jpg",
-        "category": "Dulces y postres"
+        "category": "Alimentos"
     },
     {
         "id": 45,
@@ -273,31 +273,31 @@ const initialProducts = [
         "id": 46,
         "name": "Bebida de avena Alitey",
         "image": "images/Bebida_de_avena_Alitey.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 47,
         "name": "Bebida de soja sabor vainilla Hacendado 0% azúcar",
         "image": "images/Bebida_de_soja_sabor_vainilla_Hacendado_0%_azúcar.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 48,
         "name": "Bebida energética Mango Loco Monster",
         "image": "images/Bebida_energética_Mango_Loco_Monster.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 49,
         "name": "Bebida Kéfir de coco Hacendado",
         "image": "images/Bebida_Kéfir_de_coco_Hacendado.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 50,
         "name": "Bebida láctea natural Actimel Danone",
         "image": "images/Bebida_láctea_natural_Actimel_Danone.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 51,
@@ -327,13 +327,13 @@ const initialProducts = [
         "id": 55,
         "name": "Café en cápsula extra fuerte Hacendado compatibles máquinas Nespresso",
         "image": "images/Café_en_cápsula_extra_fuerte_Hacendado_compatibles_máquinas_Nespresso.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 56,
         "name": "Café molido natural Hacendado",
         "image": "images/Café_molido_natural_Hacendado.jpg",
-        "category": "Alimentos"
+        "category": "Bebidas"
     },
     {
         "id": 57,
@@ -391,8 +391,8 @@ const initialProducts = [
     },
     {
         "id": 66,
-        "name": "Cerveza especial Estrella Galicia (2)",
-        "image": "images/Cerveza_especial_Estrella_Galicia_(2).jpg",
+        "name": "Cerveza especial Estrella Galicia",
+        "image": "images/Cerveza_especial_Estrella_Galicia.jpg",
         "category": "Bebidas alcohólicas"
     },
     {
@@ -417,7 +417,7 @@ const initialProducts = [
         "id": 70,
         "name": "Conos sabor bacon y queso Hacendado",
         "image": "images/Conos_sabor_bacon_y_queso_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 71,
@@ -429,13 +429,13 @@ const initialProducts = [
         "id": 72,
         "name": "Crema al cacao con avellanas Nocilla original",
         "image": "images/Crema_al_cacao_con_avellanas_Nocilla_original.jpg",
-        "category": "Bebeidas"
+        "category": "Dulces y postres"
     },
     {
         "id": 73,
         "name": "Crema al cacao con avellanas Nutella",
         "image": "images/Crema_al_cacao_con_avellanas_Nutella.jpg",
-        "category": "Bebeidas"
+        "category": "Dulces y postres"
     },
     {
         "id": 74,
@@ -465,7 +465,7 @@ const initialProducts = [
         "id": 78,
         "name": "Delicias de pollo Hacendado ultracongeladas con empanado a base de maíz",
         "image": "images/Delicias_de_pollo_Hacendado_ultracongeladas_con_empanado_a_base_de_maíz.jpg",
-        "category": "Panadería y pastelería"
+        "category": "Alimentos"
     },
     {
         "id": 79,
@@ -489,7 +489,7 @@ const initialProducts = [
         "id": 82,
         "name": "Discos desmaquillantes Deliplus ovalados algodón 100%",
         "image": "images/Discos_desmaquillantes_Deliplus_ovalados_algodón_100%.jpg",
-        "category": "Limpieza"
+        "category": "Higiene"
     },
     {
         "id": 83,
@@ -543,7 +543,7 @@ const initialProducts = [
         "id": 91,
         "name": "Galletas caramelizadas Lotus Biscoff",
         "image": "images/Galletas_caramelizadas_Lotus_Biscoff.jpg",
-        "category": "Alimentos"
+        "category": "Dulces y postres"
     },
     {
         "id": 92,
@@ -555,7 +555,7 @@ const initialProducts = [
         "id": 93,
         "name": "Galletas mini cookies Hacendado",
         "image": "images/Galletas_mini_cookies_Hacendado.jpg",
-        "category": "Alimentos"
+        "category": "Dulces y postres"
     },
     {
         "id": 94,
@@ -585,13 +585,13 @@ const initialProducts = [
         "id": 98,
         "name": "Granizado de limón Hacendado",
         "image": "images/Granizado_de_limón_Hacendado.jpg",
-        "category": "Higiene"
+        "category": "Golosinas y postres"
     },
     {
         "id": 99,
         "name": "Guacamole Hacendado 95% aguacate fresco",
         "image": "images/Guacamole_Hacendado_95%_aguacate_fresco.jpg",
-        "category": "Agua y refrescos"
+        "category": "Alimentos"
     },
     {
         "id": 100,
@@ -615,55 +615,55 @@ const initialProducts = [
         "id": 103,
         "name": "Helado almendrado Hacendado",
         "image": "images/Helado_almendrado_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 104,
         "name": "Helado cucurucho choco nata Hacendado",
         "image": "images/Helado_cucurucho_choco_nata_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 105,
         "name": "Helado cucurucho de vainilla Hacendado",
         "image": "images/Helado_cucurucho_de_vainilla_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 106,
         "name": "Helado mini bombón almendrado Hacendado",
         "image": "images/Helado_mini_bombón_almendrado_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 107,
         "name": "Helado mini cucurucho nata Hacendado",
         "image": "images/Helado_mini_cucurucho_nata_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 108,
         "name": "Helado mini sándwich vainilla y cookie Hacendado",
         "image": "images/Helado_mini_sándwich_vainilla_y_cookie_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 109,
         "name": "Helado mini surtido Hacendado",
         "image": "images/Helado_mini_surtido_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 110,
         "name": "Helado Mochi coco Hacendado",
         "image": "images/Helado_Mochi_coco_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 111,
         "name": "Helado Mochi mango Hacendado",
         "image": "images/Helado_Mochi_mango_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 112,
@@ -675,13 +675,13 @@ const initialProducts = [
         "id": 113,
         "name": "Helado vegetal mini a base de anacardo con crema de pistacho Hacendado",
         "image": "images/Helado_vegetal_mini_a_base_de_anacardo_con_crema_de_pistacho_Hacendado.jpg",
-        "category": "Congelados"
+        "category": "Golosinas y postres"
     },
     {
         "id": 114,
         "name": "Huevos grandes L",
         "image": "images/Huevos_grandes_L.jpg",
-        "category": "Huevos, leche y mantequilla"
+        "category": "Alimentos"
     },
     {
         "id": 115,
@@ -705,19 +705,19 @@ const initialProducts = [
         "id": 118,
         "name": "Lambrusco dell'Emilia rosado espumoso Piccolo Giovanni",
         "image": "images/Lambrusco_dell'Emilia_rosado_espumoso_Piccolo_Giovanni.jpg",
-        "category": "Bebidas"
+        "category": "Bebidas alcohólicas"
     },
     {
         "id": 119,
         "name": "Langostino cocido y pelado Hacendado ultracongelado",
         "image": "images/Langostino_cocido_y_pelado_Hacendado_ultracongelado.jpg",
-        "category": "Congelados"
+        "category": "Alimentos"
     },
     {
         "id": 120,
         "name": "Lasaña boloñesa Hacendado",
         "image": "images/Lasaña_boloñesa_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 121,
@@ -735,13 +735,13 @@ const initialProducts = [
         "id": 123,
         "name": "Leche semidesnatada Hacendado",
         "image": "images/Leche_semidesnatada_Hacendado.jpg",
-        "category": "Huevos, leche y mantequilla"
+        "category": "Alimentos"
     },
     {
         "id": 124,
         "name": "Leche semidesnatada sin lactosa Hacendado",
         "image": "images/Leche_semidesnatada_sin_lactosa_Hacendado.jpg",
-        "category": "Huevos, leche y mantequilla"
+        "category": "Alimentos"
     },
     {
         "id": 125,
@@ -759,25 +759,25 @@ const initialProducts = [
         "id": 127,
         "name": "Licor de crema de turron",
         "image": "images/Licor_de_crema_de_turron.jpg",
-        "category": "Dulces y postres"
+        "category": "Bebidas alcohólicas"
     },
     {
         "id": 128,
         "name": "Limón exprimido Hacendado",
         "image": "images/Limón_exprimido_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 129,
         "name": "Limonada Don Simón light sin gas",
         "image": "images/Limonada_Don_Simón_light_sin_gas.jpg",
-        "category": "Bebeidas"
+        "category": "Bebidas"
     },
     {
         "id": 130,
         "name": "Limonada Hacendado light sin gas",
         "image": "images/Limonada_Hacendado_light_sin_gas.jpg",
-        "category": "Bebeidas"
+        "category": "Bebidas"
     },
     {
         "id": 131,
@@ -819,7 +819,7 @@ const initialProducts = [
         "id": 137,
         "name": "Merluza empanada pan fino Hacendado ultracongelada",
         "image": "images/Merluza_empanada_pan_fino_Hacendado_ultracongelada.jpg",
-        "category": "Panadería y pastelería"
+        "category": "Alimentos"
     },
     {
         "id": 138,
@@ -873,13 +873,13 @@ const initialProducts = [
         "id": 146,
         "name": "Neutrogena Spot Controlling Limpiador Facial (1 x 200 ml), gel limpiador facial con ácido salicílico para piel propensa al acné, jabón facial para los granos persistentes",
         "image": "images/Neutrogena_Spot_Controlling_Limpiador_Facial_(1_x_200_ml),_gel_limpiador_facial_con_ácido_salicílico_para_piel_propensa_al_acné,_jabón_facial_para_los_granos_persistentes.jpg",
-        "category": "Alimentos"
+        "category": "Higiene"
     },
     {
         "id": 147,
         "name": "Nuggets de pollo Hacendado ultracongelados",
         "image": "images/Nuggets_de_pollo_Hacendado_ultracongelados.jpg",
-        "category": "Congelados"
+        "category": "Alimentos"
     },
     {
         "id": 148,
@@ -903,13 +903,13 @@ const initialProducts = [
         "id": 151,
         "name": "Pan de molde blanco Hacendado",
         "image": "images/Pan_de_molde_blanco_Hacendado.jpg",
-        "category": "Panadería y pastelería"
+        "category": "Alimentos"
     },
     {
         "id": 152,
         "name": "Pan de molde blanco sin corteza Hacendado",
         "image": "images/Pan_de_molde_blanco_sin_corteza_Hacendado.jpg",
-        "category": "Panadería y pastelería"
+        "category": "Alimentos"
     },
     {
         "id": 153,
@@ -927,13 +927,13 @@ const initialProducts = [
         "id": 155,
         "name": "Papel higiénico húmedo WC Bosque Verde con aloe vera y camomila",
         "image": "images/Papel_higiénico_húmedo_WC_Bosque_Verde_con_aloe_vera_y_camomila.jpg",
-        "category": "Hogar"
+        "category": "Higiene"
     },
     {
         "id": 156,
         "name": "Papel higiénico húmedo WC Bosque Verde",
         "image": "images/Papel_higiénico_húmedo_WC_Bosque_Verde.jpg",
-        "category": "Hogar"
+        "category": "Higiene"
     },
     {
         "id": 157,
@@ -951,13 +951,13 @@ const initialProducts = [
         "id": 159,
         "name": "Pasta fresca ravioli ricotta y espinacas Hacendado",
         "image": "images/Pasta_fresca_ravioli_ricotta_y_espinacas_Hacendado.jpg",
-        "category": "Arroz, legumbres y pasta"
+        "category": "Alimentos"
     },
     {
         "id": 160,
         "name": "Pasta fresca tortellini carne Hacendado",
         "image": "images/Pasta_fresca_tortellini_carne_Hacendado.jpg",
-        "category": "Arroz, legumbres y pasta"
+        "category": "Alimentos"
     },
     {
         "id": 161,
@@ -987,37 +987,37 @@ const initialProducts = [
         "id": 165,
         "name": "Pizza 4 quesos Hacendado",
         "image": "images/Pizza_4_quesos_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 166,
         "name": "Pizza barbacoa Hacendado",
         "image": "images/Pizza_barbacoa_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 167,
         "name": "Pizza carbonara Hacendado",
         "image": "images/Pizza_carbonara_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 168,
         "name": "Pizza jamón y queso Hacendado",
         "image": "images/Pizza_jamón_y_queso_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 169,
         "name": "Pizza margarita Hacendado",
         "image": "images/Pizza_margarita_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 170,
         "name": "Pizza pollo y bacón Hacendado",
         "image": "images/Pizza_pollo_y_bacón_Hacendado.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 171,
@@ -1029,43 +1029,43 @@ const initialProducts = [
         "id": 172,
         "name": "Postre lácteo con arándanos +Proteínas Hacendado 0% m.g 10 g proteínas",
         "image": "images/Postre_lácteo_con_arándanos_+Proteínas_Hacendado_0%_m.g_10_g_proteínas.jpg",
-        "category": "Aliemntos"
+        "category": "Dulces y postres"
     },
     {
         "id": 173,
         "name": "Postre lácteo con fresa +Proteínas Hacendado 0% m.g 10 g proteínas",
         "image": "images/Postre_lácteo_con_fresa_+Proteínas_Hacendado_0%_m.g_10_g_proteínas.jpg",
-        "category": "Aliemntos"
+        "category": "Dulces y postres"
     },
     {
         "id": 174,
         "name": "Queso grana padano Hacendado en escamas",
         "image": "images/Queso_grana_padano_Hacendado_en_escamas.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 175,
         "name": "Queso lonchas emmental de vaca Hacendado",
         "image": "images/Queso_lonchas_emmental_de_vaca_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 176,
         "name": "Queso lonchas fundido suave mezcla Hacendado",
         "image": "images/Queso_lonchas_fundido_suave_mezcla_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 177,
         "name": "Queso precortado de cabra Hacendado",
         "image": "images/Queso_precortado_de_cabra_Hacendado.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 178,
         "name": "Queso untar original Philadelphia",
         "image": "images/Queso_untar_original_Philadelphia.jpg",
-        "category": "Charcutería y quesos"
+        "category": "Alimentos"
     },
     {
         "id": 179,
@@ -1077,7 +1077,7 @@ const initialProducts = [
         "id": 180,
         "name": "Ravioli en lata",
         "image": "images/Ravioli_en_lata.jpg",
-        "category": "Aliemntos"
+        "category": "Alimentos"
     },
     {
         "id": 181,
