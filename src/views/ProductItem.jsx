@@ -1,4 +1,3 @@
-// src/views/ProductItem.jsx
 import React from 'react';
 import styles from './ProductItem.module.css';
 import {
@@ -12,12 +11,15 @@ import {
 import { Add, Remove } from '@mui/icons-material';
 
 const ProductItem = ({ product, onIncrease, onDecrease }) => {
+
+    const encodedImageUrl = encodeURI(product.image);
+
     return (
         <Card className={ styles.card }>
             <CardMedia
                 component="img"
                 height="140"
-                image={ product.image }
+                image={ encodedImageUrl }
                 alt={ product.name }
                 onError={ (e) => {
                     e.target.onerror = null;

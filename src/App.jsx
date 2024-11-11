@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import initialProducts from './models/ProductModel';
 import {
@@ -23,6 +22,7 @@ import {
   IconButton,
   Typography,
   InputBase,
+  ListItemButton
 } from '@mui/material';
 import { Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
 import jsPDF from 'jspdf';
@@ -249,10 +249,10 @@ function App() {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={ handleCloseAddProductDialog }>Cancel</Button>
-            <Button onClick={ handleAddProduct } color="primary">
+            <ListItemButton onClick={ handleCloseAddProductDialog }>Cancel</ListItemButton>
+            <ListItemButton onClick={ handleAddProduct } color="primary">
               Add
-            </Button>
+            </ListItemButton>
           </DialogActions>
         </Dialog>
       </main>
