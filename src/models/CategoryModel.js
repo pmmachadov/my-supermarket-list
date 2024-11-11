@@ -1,11 +1,11 @@
 const initialCategories = [
     {
         id: 1,
-        name: 'Fruits',
+        name: 'A',
     },
     {
         id: 2,
-        name: 'Bakery',
+        name: 'B',
     },
 ];
 

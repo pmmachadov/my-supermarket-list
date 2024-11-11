@@ -13,7 +13,22 @@ import { Category as CategoryIcon, Menu as MenuIcon } from '@mui/icons-material'
 import styles from './CategoryMenu.module.css';
 
 const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose }) => {
-    const categories = Array.from(new Set(products.map((product) => product.category)));
+    // Definir las categorías únicas y corregidas
+    const categories = [
+        "Alimentos",
+        "Limpieza",
+        "Dulces y postres",
+        "Higiene",
+        "Bebidas",
+        "Panadería y pastelería",
+        "Agua y refrescos",
+        "Bebidas alcohólicas",
+        "Hogar",
+        "Golosinas y postres",
+        "Congelados",
+        "Otros",
+        "Galletas y bollería"
+    ];
 
     const drawerContent = (
         <>
