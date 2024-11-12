@@ -1,0 +1,27 @@
+.drawer {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.drawerPaper {
+    width: 240px;
+}
+
+.nested {
+    padding-left: 32px;
+}
+
+.menuButton {
+    position: fixed;
+    left: 2rem;
+    top: 5rem;
+    z-index: 1301;
+    background-color: #387DC7 !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
