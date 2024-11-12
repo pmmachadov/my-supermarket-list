@@ -13,7 +13,6 @@ import { Category as CategoryIcon, Menu as MenuIcon } from '@mui/icons-material'
 import styles from './CategoryMenu.module.css';
 
 const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose }) => {
-    // Definir las categorías únicas y corregidas
     const categories = [
         "Alimentos",
         "Limpieza",
@@ -22,7 +21,6 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
         "Bebidas",
         "Panadería y pastelería",
         "Agua y refrescos",
-        "Bebidas alcohólicas",
         "Hogar",
         "Golosinas y postres",
         "Congelados",
@@ -35,7 +33,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Toolbar />
             <Divider />
             <List component="nav">
-                <ListItem button onClick={ () => onSelectCategory(null) }>
+                <ListItem button={ true } onClick={ () => onSelectCategory(null) }>
                     <ListItemIcon>
                         <CategoryIcon />
                     </ListItemIcon>
@@ -43,7 +41,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                 </ListItem>
                 { categories.map((category, index) => (
                     <ListItem
-                        button
+                        button={ true }
                         key={ index }
                         selected={ category === selectedCategory }
                         onClick={ () => {

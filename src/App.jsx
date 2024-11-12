@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import initialProducts from './models/ProductModel';
 import {
-  increaseQuantity,
-  decreaseQuantity,
+  updateQuantity,
   addProduct,
 } from './controllers/ProductController';
 import ProductList from './views/ProductList';
@@ -22,7 +21,6 @@ function App() {
     const savedProducts = localStorage.getItem('products');
     return savedProducts ? JSON.parse(savedProducts) : initialProducts;
   });
-
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,6 +37,10 @@ function App() {
     setSelectedCategory(category);
     setSearchQuery('');
     handleCloseMenu();
+  };
+
+  const handleQuantityChange = (id, newQuantity) => {
+    setProducts((prevProducts) => updateQuantity(prevProducts, id, newQuantity));
   };
 
   return (
@@ -87,6 +89,7 @@ function App() {
             products={ products }
             selectedCategory={ selectedCategory }
             searchQuery={ searchQuery }
+            onQuantityChange={ handleQuantityChange }
           />
         </div>
       </main>

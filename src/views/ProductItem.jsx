@@ -1,15 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ProductItem.module.css';
 import {
     Card,
     CardMedia,
     Typography,
-    IconButton,
+    TextField,
 } from '@mui/material';
-import { Add, Remove } from '@mui/icons-material';
 
-const ProductItem = ({ product, onIncrease, onDecrease }) => {
+const ProductItem = ({ product, onQuantityChange }) => {
     const encodedImageUrl = encodeURI(product.image);
+
+    const handleQuantityChange = (event) => {
+        const newQuantity = parseFloat(event.target.value);
+        if (!isNaN(newQuantity)) {
+            onQuantityChange(product.id, newQuantity);
+        }
+    };
+
+    const handleKeyPress = (event) => {
+        const charCode = event.charCode;
+        if (charCode !== 46 && charCode !== 44 && (charCode < 48 || charCode > 57)) {
+            event.preventDefault();
+        }
+    };
 
     return (
         <Card className={ styles.card }>
@@ -28,19 +42,34 @@ const ProductItem = ({ product, onIncrease, onDecrease }) => {
                     { product.name }
                 </Typography>
                 <div className={ styles.actions }>
-                    <IconButton onClick={ () => onDecrease(product.id) }>
-                        <Remove style={ { color: 'white' } } />
-                    </IconButton>
+                    <TextField
+                        type="number"
+                        value={ product.quantity ?? '' }
+                        onChange={ handleQuantityChange }
+                        onKeyPress={ handleKeyPress }
+                        inputProps={ { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } }
+                        InputProps={ {
+                            style: { color: 'white' },
+                        } }
+                    />
                     <Typography variant="body1" style={ { color: 'white' } }>
-                        { product.quantity }
+                        { product.unitType }
                     </Typography>
-                    <IconButton onClick={ () => onIncrease(product.id) }>
-                        <Add style={ { color: 'white' } } />
-                    </IconButton>
                 </div>
             </div>
         </Card>
     );
+};
+
+ProductItem.propTypes = {
+    product: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        quantity: PropTypes.number,
+        unitType: PropTypes.string,
+    }).isRequired,
+    onQuantityChange: PropTypes.func.isRequired,
 };
 
 export default ProductItem;

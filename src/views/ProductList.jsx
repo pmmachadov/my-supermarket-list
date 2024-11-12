@@ -3,7 +3,7 @@ import ProductItem from './ProductItem';
 import { Grid, Typography } from '@mui/material';
 
 const ProductList = React.forwardRef(
-    ({ products, onIncrease, onDecrease, selectedCategory, searchQuery }, ref) => {
+    ({ products, onQuantityChange, selectedCategory, searchQuery }, ref) => {
         const filteredProducts = products.filter(
             (product) =>
                 (selectedCategory === null || product.category === selectedCategory) &&
@@ -18,8 +18,7 @@ const ProductList = React.forwardRef(
                             <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } key={ product.id }>
                                 <ProductItem
                                     product={ product }
-                                    onIncrease={ onIncrease }
-                                    onDecrease={ onDecrease }
+                                    onQuantityChange={ onQuantityChange }
                                 />
                             </Grid>
                         )) }
