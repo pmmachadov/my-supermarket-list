@@ -49,7 +49,7 @@ const ProductItem = ({ product, onQuantityChange }) => {
                         onKeyPress={ handleKeyPress }
                         inputProps={ { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } }
                         InputProps={ {
-                            style: { color: 'white' },
+                            className: styles.inputField, // Aplica la clase CSS
                         } }
                     />
                     <Typography variant="body1" style={ { color: 'white' } }>
@@ -73,3 +73,7 @@ ProductItem.propTypes = {
 };
 
 export default ProductItem;
+
+export const addCategory = (categories, newCategory) => {
+    return [...categories, newCategory];
+};

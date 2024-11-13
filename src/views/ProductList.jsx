@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductItem from './ProductItem';
 import { Grid, Typography } from '@mui/material';
+import styles from './ProductList.module.css';
 
 const ProductList = React.forwardRef(
     ({ products, onQuantityChange, selectedCategory, searchQuery }, ref) => {
@@ -11,7 +12,7 @@ const ProductList = React.forwardRef(
         );
 
         return (
-            <div ref={ ref }>
+            <div ref={ ref } className={ styles.productListContainer }>
                 { filteredProducts.length > 0 ? (
                     <Grid container spacing={ 2 } justifyContent="center">
                         { filteredProducts.map((product) => (
