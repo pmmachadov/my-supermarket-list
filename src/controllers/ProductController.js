@@ -21,3 +21,9 @@ export const updateQuantity = (products, id, newQuantity) => {
 export const addProduct = (products, newProduct) => {
     return [...products, newProduct];
 };
+
+export const updateUnitType = (products, id, newUnitType) => {
+    return products.map((product) =>
+        product.id === id ? { ...product, unitType: newUnitType } : product
+    );
+};

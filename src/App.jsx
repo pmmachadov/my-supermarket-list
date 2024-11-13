@@ -3,6 +3,7 @@ import initialProducts from './models/ProductModel';
 import {
   updateQuantity,
   addProduct,
+  updateUnitType,
 } from './controllers/ProductController';
 import ProductList from './views/ProductList';
 import CategoryMenu from './views/CategoryMenu';
@@ -44,6 +45,10 @@ function App() {
 
   const handleQuantityChange = (id, newQuantity) => {
     setProducts((prevProducts) => updateQuantity(prevProducts, id, newQuantity));
+  };
+
+  const handleUnitTypeChange = (id, newUnitType) => {
+    setProducts((prevProducts) => updateUnitType(prevProducts, id, newUnitType));
   };
 
   const handleShowSummary = () => {
@@ -103,6 +108,7 @@ function App() {
               selectedCategory={ selectedCategory }
               searchQuery={ searchQuery }
               onQuantityChange={ handleQuantityChange }
+              onUnitTypeChange={ handleUnitTypeChange }
             />
           ) }
         </div>

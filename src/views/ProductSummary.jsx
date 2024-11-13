@@ -1,16 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {
-    Card,
-    CardMedia,
-    CardContent,
-    Typography,
-    Grid,
-    Button,
-} from '@mui/material';
-import { GetApp as GetAppIcon } from '@mui/icons-material';
+import { Typography, Grid, Card, CardMedia, CardContent, Button } from '@mui/material';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import handleDownloadPDF from './handleDownloadPDF';
 import styles from './ProductSummary.module.css';
-import handleDownloadWord from './handleDownloadWord';
 
 const ProductSummary = ({ products }) => {
     return (
@@ -38,7 +30,6 @@ const ProductSummary = ({ products }) => {
                                 </Typography>
                             </CardContent>
                         </Card>
-
                     </Grid>
                 )) }
             </Grid>
@@ -46,25 +37,13 @@ const ProductSummary = ({ products }) => {
                 variant="contained"
                 color="primary"
                 startIcon={ <GetAppIcon /> }
-                onClick={ () => handleDownloadWord(products) }
+                onClick={ () => handleDownloadPDF(products) }
                 className={ styles.downloadButton }
             >
-                Descargar Lista en Word
+                Descargar Lista en PDF
             </Button>
         </div>
     );
-};
-
-ProductSummary.propTypes = {
-    products: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-            name: PropTypes.string.isRequired,
-            image: PropTypes.string.isRequired,
-            quantity: PropTypes.number.isRequired,
-            unitType: PropTypes.string.isRequired,
-        })
-    ).isRequired,
 };
 
 export default ProductSummary;

@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 import { Grid, Typography } from '@mui/material';
 import styles from './ProductList.module.css';
 
 const ProductList = React.forwardRef(
-    ({ products, onQuantityChange, selectedCategory, searchQuery }, ref) => {
+    ({ products, onQuantityChange, onUnitTypeChange, selectedCategory, searchQuery }, ref) => {
         const filteredProducts = products.filter(
             (product) =>
                 (selectedCategory === null || product.category === selectedCategory) &&
@@ -20,6 +21,7 @@ const ProductList = React.forwardRef(
                                 <ProductItem
                                     product={ product }
                                     onQuantityChange={ onQuantityChange }
+                                    onUnitTypeChange={ onUnitTypeChange }
                                 />
                             </Grid>
                         )) }
@@ -31,5 +33,13 @@ const ProductList = React.forwardRef(
         );
     }
 );
+
+ProductList.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.object).isRequired,
+    onQuantityChange: PropTypes.func.isRequired,
+    onUnitTypeChange: PropTypes.func.isRequired,
+    selectedCategory: PropTypes.string,
+    searchQuery: PropTypes.string,
+};
 
 export default ProductList;

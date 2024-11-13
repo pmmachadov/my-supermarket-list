@@ -6,9 +6,13 @@ import {
     CardMedia,
     Typography,
     TextField,
+    Select,
+    MenuItem,
+    FormControl,
+    InputLabel,
 } from '@mui/material';
 
-const ProductItem = ({ product, onQuantityChange }) => {
+const ProductItem = ({ product, onQuantityChange, onUnitTypeChange }) => {
     const encodedImageUrl = encodeURI(product.image);
 
     const handleQuantityChange = (event) => {
@@ -16,6 +20,10 @@ const ProductItem = ({ product, onQuantityChange }) => {
         if (!isNaN(newQuantity)) {
             onQuantityChange(product.id, newQuantity);
         }
+    };
+
+    const handleUnitTypeChange = (event) => {
+        onUnitTypeChange(product.id, event.target.value);
     };
 
     const handleKeyPress = (event) => {
@@ -49,12 +57,21 @@ const ProductItem = ({ product, onQuantityChange }) => {
                         onKeyPress={ handleKeyPress }
                         inputProps={ { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } }
                         InputProps={ {
-                            className: styles.inputField, // Aplica la clase CSS
+                            className: styles.inputField,
                         } }
                     />
-                    <Typography variant="body1" style={ { color: 'white' } }>
-                        { product.unitType }
-                    </Typography>
+                    <FormControl variant="outlined" className={ styles.formControl }>
+                        <InputLabel id={ `unit-type-label-${product.id}` }>Tipo de Unidad</InputLabel>
+                        <Select
+                            labelId={ `unit-type-label-${product.id}` }
+                            value={ product.unitType || 'unidad/es' }
+                            onChange={ handleUnitTypeChange }
+                            label="Tipo de Unidad"
+                        >
+                            <MenuItem value="unidad/es">Unidad/es</MenuItem>
+                            <MenuItem value="paquete/s">Paquete/s</MenuItem>
+                        </Select>
+                    </FormControl>
                 </div>
             </div>
         </Card>
@@ -70,6 +87,7 @@ ProductItem.propTypes = {
         unitType: PropTypes.string,
     }).isRequired,
     onQuantityChange: PropTypes.func.isRequired,
+    onUnitTypeChange: PropTypes.func.isRequired,
 };
 
 export default ProductItem;
