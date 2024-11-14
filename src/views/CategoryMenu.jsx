@@ -33,11 +33,11 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Toolbar />
             <Divider />
             <List component="nav">
-                <ListItem button={ true } onClick={ () => onSelectCategory(null) }>
+                <ListItem button={ true } onClick={ () => onSelectCategory(null) } className={ styles.listItem }>
                     <ListItemIcon>
                         <CategoryIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Todo" />
+                    <ListItemText primary="Todo" classes={ { primary: styles.listItemText } } />
                 </ListItem>
                 { categories.map((category, index) => (
                     <ListItem
@@ -48,8 +48,9 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                             onSelectCategory(category);
                             onClose();
                         } }
+                        className={ styles.listItem }
                     >
-                        <ListItemText primary={ category } />
+                        <ListItemText primary={ category } classes={ { primary: styles.listItemText } } />
                     </ListItem>
                 )) }
             </List>

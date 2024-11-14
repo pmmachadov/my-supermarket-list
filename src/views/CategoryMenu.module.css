@@ -1,14 +1,16 @@
 .drawer {
     width: 240px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .drawerPaper {
-    width: 240px;
+    width: auto;
 }
 
 .nested {
-    padding-left: 32px;
+    padding-left: 4px;
 }
 
 .menuButton {
@@ -24,4 +26,110 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.listItem {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.listItemText {
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .drawer {
+        width: 200px;
+    }
+
+    .menuButton {
+        left: 1rem;
+        top: 4rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .listItem {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .drawer {
+        width: 220px;
+    }
+
+    .menuButton {
+        left: 1.5rem;
+        top: 4.5rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .listItem {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .drawer {
+        width: 240px;
+    }
+
+    .menuButton {
+        left: 2rem;
+        top: 5rem;
+        width: 48px;
+        height: 48px;
+    }
+
+    .listItem {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .drawer {
+        width: 260px;
+    }
+
+    .menuButton {
+        left: 2.5rem;
+        top: 5.5rem;
+        width: 52px;
+        height: 52px;
+    }
+
+    .listItem {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/* Extra large devices (extra large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .drawer {
+        width: 280px;
+    }
+
+    .menuButton {
+        left: 3rem;
+        top: 6rem;
+        width: 56px;
+        height: 56px;
+    }
+
+    .listItem {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
 }

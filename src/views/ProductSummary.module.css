@@ -1,0 +1,80 @@
+.summaryContainer {
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.downloadButton {
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.cardMedia {
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+    .cardMedia {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardMedia {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .cardMedia {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cardMedia {
+        width: 10.5rem;
+        height: 10.5rem;
+    }
+}
+
+.productName {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.productDetails {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.productQuantity {
+    font-size: 1rem !important;
+}

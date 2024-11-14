@@ -3,15 +3,18 @@ import initialProducts from './models/ProductModel';
 import {
   updateQuantity,
   addProduct,
+  updateUnitType,
 } from './controllers/ProductController';
 import ProductList from './views/ProductList';
 import CategoryMenu from './views/CategoryMenu';
+import ProductSummary from './views/ProductSummary';
 import {
   AppBar,
   Toolbar,
   IconButton,
   Typography,
   InputBase,
+  Button,
 } from '@mui/material';
 import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
 import styles from './App.module.css';
@@ -24,6 +27,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,6 +47,14 @@ function App() {
     setProducts((prevProducts) => updateQuantity(prevProducts, id, newQuantity));
   };
 
+  const handleUnitTypeChange = (id, newUnitType) => {
+    setProducts((prevProducts) => updateUnitType(prevProducts, id, newUnitType));
+  };
+
+  const handleShowSummary = () => {
+    setShowSummary(true);
+  };
+
   return (
     <div className={ styles.appContainer }>
       <CategoryMenu
@@ -54,7 +66,7 @@ function App() {
       />
       <main className={ styles.mainContent }>
         <AppBar position="fixed" className={ styles.appBarContent }>
-          <Toolbar>
+          <Toolbar className={ styles.toolbar }>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -82,15 +94,23 @@ function App() {
                 inputProps={ { 'aria-label': 'search' } }
               />
             </div>
+            <Button color="inherit" onClick={ handleShowSummary }>
+              Ver Resumen
+            </Button>
           </Toolbar>
         </AppBar>
         <div className={ styles.productContainer }>
-          <ProductList
-            products={ products }
-            selectedCategory={ selectedCategory }
-            searchQuery={ searchQuery }
-            onQuantityChange={ handleQuantityChange }
-          />
+          { showSummary ? (
+            <ProductSummary products={ products.filter(product => product.quantity > 0) } />
+          ) : (
+            <ProductList
+              products={ products }
+              selectedCategory={ selectedCategory }
+              searchQuery={ searchQuery }
+              onQuantityChange={ handleQuantityChange }
+              onUnitTypeChange={ handleUnitTypeChange }
+            />
+          ) }
         </div>
       </main>
     </div>
