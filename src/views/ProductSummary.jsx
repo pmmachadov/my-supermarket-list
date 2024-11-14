@@ -6,7 +6,7 @@ import styles from './ProductSummary.module.css';
 
 const ProductSummary = ({ products }) => {
     return (
-        <div className={ styles.summaryContainer }>
+        <div id="product-summary" className={ styles.summaryContainer }>
             <Typography variant="h4" className={ styles.title }>
                 Resumen de Productos
             </Typography>
@@ -18,7 +18,7 @@ const ProductSummary = ({ products }) => {
                             <CardMedia
                                 component="img"
                                 className={ styles.cardMedia }
-                                image={ encodeURI(product.image) }
+                                image={ encodeURI(`/${product.image}`) }
                                 alt={ product.name }
                             />
                             <CardContent className={ styles.productDetails }>

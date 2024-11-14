@@ -1,7 +1,8 @@
-import convertToPDF from './ConvertToPDF';
+import { pdf } from '@react-pdf/renderer';
+import ProductSummaryPDF from './ProductSummaryPDF';
 
 const handleDownloadPDF = async (products) => {
-    const blob = await convertToPDF(products.filter(product => product.quantity > 0));
+    const blob = await pdf(<ProductSummaryPDF products={products} />).toBlob();
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'productos.pdf';
