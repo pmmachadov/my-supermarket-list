@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductItem.module.css';
 import {
     Card,
     CardMedia,
+    CardContent,
     Typography,
     TextField,
     Select,
@@ -12,68 +13,59 @@ import {
     InputLabel,
 } from '@mui/material';
 
-const ProductItem = ({ product, onQuantityChange, onUnitTypeChange }) => {
-    const encodedImageUrl = encodeURI(product.image);
+const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) => {
+    const [isHovered, setIsHovered] = useState(false);
 
-    const handleQuantityChange = (event) => {
-        const newQuantity = parseFloat(event.target.value);
-        if (!isNaN(newQuantity)) {
-            onQuantityChange(product.id, newQuantity);
-        }
+    const handleMouseEnter = () => {
+        setIsHovered(true);
     };
 
-    const handleUnitTypeChange = (event) => {
-        onUnitTypeChange(product.id, event.target.value);
-    };
-
-    const handleKeyPress = (event) => {
-        const charCode = event.charCode;
-        if (charCode !== 46 && charCode !== 44 && (charCode < 48 || charCode > 57)) {
-            event.preventDefault();
-        }
+    const handleMouseLeave = () => {
+        setIsHovered(false);
     };
 
     return (
-        <Card className={ styles.card }>
+        <Card
+            className={ styles.card }
+            onMouseEnter={ handleMouseEnter }
+            onMouseLeave={ handleMouseLeave }
+        >
             <CardMedia
                 component="img"
                 className={ styles.cardMedia }
-                image={ encodedImageUrl }
+                image={ encodeURI(`/${product.image}`) }
                 alt={ product.name }
-                onError={ (e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/300';
-                } }
             />
-            <div className={ styles.overlay }>
+            <CardContent className={ styles.productDetails }>
                 <Typography variant="h6" className={ styles.productName }>
                     { product.name }
                 </Typography>
-                <div className={ styles.actions }>
+                <Typography variant="body2" className={ styles.productQuantity }>
+                    Cantidad: { quantity } { product.unitType }
+                </Typography>
+            </CardContent>
+            { isHovered && (
+                <div className={ styles.overlay }>
                     <TextField
                         type="number"
-                        value={ product.quantity ?? '' }
-                        onChange={ handleQuantityChange }
-                        onKeyPress={ handleKeyPress }
+                        value={ quantity ?? '' }
+                        onChange={ (e) => onQuantityChange(product.id, parseFloat(e.target.value)) }
+                        className={ styles.inputField }
                         inputProps={ { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } }
-                        InputProps={ {
-                            className: styles.inputField,
-                        } }
                     />
-                    <FormControl variant="outlined" className={ styles.formControl }>
+                    <FormControl className={ styles.unitTypeSelect }>
                         <InputLabel id={ `unit-type-label-${product.id}` }>Tipo de Unidad</InputLabel>
                         <Select
                             labelId={ `unit-type-label-${product.id}` }
                             value={ product.unitType || 'unidad/es' }
-                            onChange={ handleUnitTypeChange }
-                            label="Tipo de Unidad"
+                            onChange={ (e) => onUnitTypeChange(product.id, e.target.value) }
                         >
                             <MenuItem value="unidad/es">Unidad/es</MenuItem>
                             <MenuItem value="paquete/s">Paquete/s</MenuItem>
                         </Select>
                     </FormControl>
                 </div>
-            </div>
+            ) }
         </Card>
     );
 };
@@ -86,12 +78,9 @@ ProductItem.propTypes = {
         quantity: PropTypes.number,
         unitType: PropTypes.string,
     }).isRequired,
+    quantity: PropTypes.number.isRequired,
     onQuantityChange: PropTypes.func.isRequired,
     onUnitTypeChange: PropTypes.func.isRequired,
 };
 
 export default ProductItem;
-
-export const addCategory = (categories, newCategory) => {
-    return [...categories, newCategory];
-};

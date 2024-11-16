@@ -1,13 +1,24 @@
+.productListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .card {
-    width: 100%;
-    height: 300px;
+    flex: 1 1 calc(32% - 20px);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-height: 400px;
+    height: 100%;
+    position: relative;
 }
 
 .card:hover {
@@ -15,22 +26,65 @@
 }
 
 .cardMedia {
-    height: 60%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
 }
 
 .cardContent {
     text-align: center;
-    font-size: 0.8rem;
+}
+
+.productDetails {
+    flex-grow: 1;
+    text-align: left;
+    width: 100%;
 }
 
 .productName {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.productQuantity {
+    font-size: 1rem !important;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+}
+
+.card:hover .overlay,
+.card:focus-within .overlay {
+    display: block;
+}
+
+.inputField {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.unitTypeSelect {
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .actions {
