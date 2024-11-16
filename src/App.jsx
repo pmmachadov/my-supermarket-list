@@ -18,6 +18,7 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
 import styles from './App.module.css';
+import handleDownloadPDF from './views/handleDownloadPDF';
 
 function App() {
   const [products, setProducts] = useState(() => {
@@ -44,11 +45,19 @@ function App() {
   };
 
   const handleQuantityChange = (id, newQuantity) => {
-    setProducts((prevProducts) => updateQuantity(prevProducts, id, newQuantity));
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id ? { ...product, quantity: newQuantity } : product
+      )
+    );
   };
 
   const handleUnitTypeChange = (id, newUnitType) => {
-    setProducts((prevProducts) => updateUnitType(prevProducts, id, newUnitType));
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id ? { ...product, unitType: newUnitType } : product
+      )
+    );
   };
 
   const handleShowSummary = () => {
@@ -111,6 +120,15 @@ function App() {
               onUnitTypeChange={ handleUnitTypeChange }
             />
           ) }
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={ <GetAppIcon /> }
+            onClick={ () => handleDownloadPDF(products) }
+            className={ styles.downloadButton }
+          >
+            Descargar Lista en PDF
+          </Button>
         </div>
       </main>
     </div>

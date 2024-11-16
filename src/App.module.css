@@ -35,7 +35,8 @@
 
 .productContainer {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 1rem;
     width: 100%;
     max-width: 1200px;
