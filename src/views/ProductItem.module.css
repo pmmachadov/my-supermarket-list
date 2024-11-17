@@ -3,15 +3,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    /* Cambia a flex-start para que el contenido comience desde arriba */
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 30px;
     max-height: 400px;
+    /* Ajusta la altura máxima si es necesario */
     height: 100%;
     position: relative;
     transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    /* Fondo blanco */
 }
 
 .card:hover {
@@ -30,18 +34,21 @@
 .productNameOverlay {
     position: absolute;
     top: 10px;
+    /* Ajusta la posición del texto */
     left: 10px;
+    /* Ajusta la posición del texto */
     background: rgba(255, 255, 255, 0.7);
+    /* Fondo blanco ligeramente transparente */
     padding: 5px;
     border-radius: 5px;
     color: black;
+    /* Cambia el color del texto a negro */
     font-size: 1rem;
     font-weight: bold;
     text-align: left;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-clamp: 2;
     overflow: hidden;
 }
 
@@ -50,6 +57,7 @@
     text-align: left;
     width: 100%;
     margin-top: 10px;
+    /* Añade un margen superior para separar el contenido */
 }
 
 .productName {
@@ -64,6 +72,7 @@
 
 .overlay {
     position: absolute;
+    /* Cambia de fixed a absolute */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -73,6 +82,7 @@
     box-sizing: border-box;
     text-align: center;
     display: none;
+    /* Asegúrate de que el contenedor tenga una posición relativa */
 }
 
 .card:hover .overlay,
@@ -94,6 +104,8 @@
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+    position: relative;
+    /* Asegúrate de que el contenedor tenga una posición relativa */
 }
 
 .actions {

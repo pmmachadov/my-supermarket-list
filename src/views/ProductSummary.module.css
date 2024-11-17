@@ -37,9 +37,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 30px;
-    /* Ajusta el margen inferior para aumentar el espacio vertical */
     max-height: 300px;
-    /* Ajusta la altura máxima */
     height: 100%;
     position: relative;
 }
@@ -73,6 +71,7 @@
 
 .overlay {
     position: absolute;
+    /* Cambia de fixed a absolute */
     bottom: 0;
     left: 0;
     width: 100%;

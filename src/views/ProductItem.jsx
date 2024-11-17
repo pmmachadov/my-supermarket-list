@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductItem.module.css';
 import {
@@ -15,6 +15,7 @@ import {
 
 const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const anchorRef = useRef(null); // Create a reference for the anchor element
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -58,6 +59,19 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
                             labelId={ `unit-type-label-${product.id}` }
                             value={ product.unitType || 'unidad/es' }
                             onChange={ (e) => onUnitTypeChange(product.id, e.target.value) }
+                            MenuProps={ {
+                                anchorEl: anchorRef.current, // Use the reference for the anchor element
+                                anchorOrigin: {
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                },
+                                transformOrigin: {
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                },
+                                getContentAnchorEl: null,
+                            } }
+                            ref={ anchorRef } // Assign the reference to the Select component
                         >
                             <MenuItem value="unidad/es">Unidad/es</MenuItem>
                             <MenuItem value="paquete/s">Paquete/s</MenuItem>

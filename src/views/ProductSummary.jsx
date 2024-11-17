@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Grid, Button } from '@mui/material';
+import { Typography, Box, Stack, Button } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import HomeIcon from '@mui/icons-material/Home';
@@ -32,12 +32,12 @@ const ProductSummary = ({ products, onResetProducts, onGoHome }) => {
     const filteredProducts = products.filter(product => productQuantities[product.id] > 0);
 
     return (
-        <div id="product-summary" className={ styles.summaryContainer }>
+        <Box id="product-summary" className={ styles.summaryContainer }>
             <Typography variant="h4" className={ styles.title }>
                 Resumen de Productos
             </Typography>
 
-            <div className={ styles.buttonContainer }>
+            <Box className={ styles.buttonContainer }>
                 <Button
                     variant="contained"
                     color="secondary"
@@ -64,21 +64,21 @@ const ProductSummary = ({ products, onResetProducts, onGoHome }) => {
                 >
                     Inicio
                 </Button>
-            </div>
+            </Box>
 
-            <Grid container spacing={ 3 }>
+            <Stack spacing={ 3 } direction="row" flexWrap="wrap" justifyContent="space-between">
                 { filteredProducts.map((product) => (
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } key={ product.id }>
+                    <Box key={ product.id } flexBasis={ { xs: '100%', sm: '48%', md: '31%', lg: '23%' } }>
                         <ProductItem
                             product={ product }
                             quantity={ productQuantities[product.id] }
                             onQuantityChange={ handleQuantityChange }
                             onUnitTypeChange={ handleUnitTypeChange }
                         />
-                    </Grid>
+                    </Box>
                 )) }
-            </Grid>
-        </div>
+            </Stack>
+        </Box>
     );
 };
 
