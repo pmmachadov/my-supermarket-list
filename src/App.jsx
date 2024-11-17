@@ -1,10 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import initialProducts from './models/ProductModel';
-import {
-  updateQuantity,
-  addProduct,
-  updateUnitType,
-} from './controllers/ProductController';
 import ProductList from './views/ProductList';
 import CategoryMenu from './views/CategoryMenu';
 import ProductSummary from './views/ProductSummary';
@@ -18,13 +13,9 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
 import styles from './App.module.css';
-import handleDownloadPDF from './views/handleDownloadPDF';
 
 function App() {
-  const [products, setProducts] = useState(() => {
-    const savedProducts = localStorage.getItem('products');
-    return savedProducts ? JSON.parse(savedProducts) : initialProducts;
-  });
+  const [products, setProducts] = useState(initialProducts);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,6 +53,16 @@ function App() {
 
   const handleShowSummary = () => {
     setShowSummary(true);
+  };
+
+  const handleResetProducts = () => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) => ({ ...product, quantity: 0 }))
+    );
+  };
+
+  const handleGoHome = () => {
+    setShowSummary(false);
   };
 
   return (
@@ -110,7 +111,11 @@ function App() {
         </AppBar>
         <div className={ styles.productContainer }>
           { showSummary ? (
-            <ProductSummary products={ products.filter(product => product.quantity > 0) } />
+            <ProductSummary
+              products={ products }
+              onResetProducts={ handleResetProducts }
+              onGoHome={ handleGoHome }
+            />
           ) : (
             <ProductList
               products={ products }
@@ -120,15 +125,6 @@ function App() {
               onUnitTypeChange={ handleUnitTypeChange }
             />
           ) }
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={ <GetAppIcon /> }
-            onClick={ () => handleDownloadPDF(products) }
-            className={ styles.downloadButton }
-          >
-            Descargar Lista en PDF
-          </Button>
         </div>
       </main>
     </div>
