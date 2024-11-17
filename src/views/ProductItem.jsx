@@ -30,16 +30,15 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
             onMouseEnter={ handleMouseEnter }
             onMouseLeave={ handleMouseLeave }
         >
-            <CardMedia
-                component="img"
-                className={ styles.cardMedia }
-                image={ encodeURI(`/${product.image}`) }
-                alt={ product.name }
-            />
+            <div className={ styles.cardMedia }>
+                <img src={ encodeURI(`/${product.image}`) } alt={ product.name } style={ { width: '100%', borderRadius: '5px' } } />
+                <div className={ styles.productNameOverlay }>
+                    <Typography variant="h6" className={ styles.productName }>
+                        { product.name }
+                    </Typography>
+                </div>
+            </div>
             <CardContent className={ styles.productDetails }>
-                <Typography variant="h6" className={ styles.productName }>
-                    { product.name }
-                </Typography>
                 <Typography variant="body2" className={ styles.productQuantity }>
                     Cantidad: { quantity } { product.unitType }
                 </Typography>

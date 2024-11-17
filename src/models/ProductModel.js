@@ -5,7 +5,7 @@ const initialProducts = [
         "image": "images/Sopa_con_wonton_de_langostino_y_fideos_Hacendado_ultracongelada.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@ const initialProducts = [
         "image": "images/Sticks_de_patata_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@ const initialProducts = [
         "image": "images/Suavizante_ropa_Nutrive_Bosque_Verde_concentrado.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@ const initialProducts = [
         "image": "images/Surtido_de_mini_turrones_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@ const initialProducts = [
         "image": "images/Surtido_sushi_Bento_pequeño_contiene_2_nigiris,_4_makis,_2_uramakis,_salsa_de_soja_y_salsa_wasabi.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@ const initialProducts = [
         "image": "images/Tampones_regular_Deliplus_100%_algodón.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@ const initialProducts = [
         "image": "images/Tarta_helada_nata_y_chocolate_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@ const initialProducts = [
         "image": "images/Tinto_de_verano_sabor_limón_La_Casera.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@ const initialProducts = [
         "image": "images/Toallitas_bebé_frescas_&_perfumadas_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@ const initialProducts = [
         "image": "images/Toallitas_íntimas_cuidado_diario_Deliplus_monodosis.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@ const initialProducts = [
         "image": "images/Tónica_original_Schweppes.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@ const initialProducts = [
         "image": "images/Tónica_pink_zero_Schweppes.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@ const initialProducts = [
         "image": "images/Tubitos_bañados_chocolate_negro_Hacendado_ideal_para_postres_y_helados.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@ const initialProducts = [
         "image": "images/Turrón_Crema_Catalana'.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@ const initialProducts = [
         "image": "images/Turrón_de_yema_tostada_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@ const initialProducts = [
         "image": "images/Turrón_Crema_Catalana.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@ const initialProducts = [
         "image": "images/Vaso_de_golosinas_Halloween.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@ const initialProducts = [
         "image": "images/Vermouth_blanco_Maronti.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@ const initialProducts = [
         "image": "images/Vermouth_rojo_Maronti.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 20,
@@ -157,7 +157,7 @@ const initialProducts = [
         "image": "images/Vino_tinto_Casón_Histórico.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 21,
@@ -165,7 +165,7 @@ const initialProducts = [
         "image": "images/Vino-dulce-Blue-moscato-VCristina-espumoso.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 22,
@@ -173,7 +173,7 @@ const initialProducts = [
         "image": "images/12_Mini_croissants_de_mantequilla.jpg",
         "category": "Panadería y pastelería",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 23,
@@ -181,7 +181,7 @@ const initialProducts = [
         "image": "images/12_Mini_saladas.jpg",
         "category": "Panadería y pastelería",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 24,
@@ -189,7 +189,7 @@ const initialProducts = [
         "image": "images/Abrillantador_lavavajillas_líquido_Bosque_Verde.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 25,
@@ -197,7 +197,7 @@ const initialProducts = [
         "image": "images/Aceite_de_girasol_refinado_0,2º_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 26,
@@ -205,7 +205,7 @@ const initialProducts = [
         "image": "images/Aceite_de_oliva_virgen_extra_Hacendado_Spray.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 27,
@@ -213,7 +213,7 @@ const initialProducts = [
         "image": "images/Aceite_de_oliva_virgen_extra_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 28,
@@ -221,7 +221,7 @@ const initialProducts = [
         "image": "images/Agua_destilada_Bosque_Verde.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 29,
@@ -229,7 +229,7 @@ const initialProducts = [
         "image": "images/Agua_Micelar_cara_y_ojos_Facial_Clean_Deliplus_todo_tipo_de_piel.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 30,
@@ -237,7 +237,7 @@ const initialProducts = [
         "image": "images/Agua_mineral_grande_Bezoya_mineralización_muy_débil.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 31,
@@ -245,7 +245,7 @@ const initialProducts = [
         "image": "images/Agua_mineral_pequeña_Font_Agudes_tapón_infantil_mineralización_débil.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 32,
@@ -253,7 +253,7 @@ const initialProducts = [
         "image": "images/Albóndigas_en_salsa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 33,
@@ -261,7 +261,7 @@ const initialProducts = [
         "image": "images/Allioli_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 34,
@@ -269,7 +269,7 @@ const initialProducts = [
         "image": "images/Ambientador_eléctrico_Spa_Bosque_Verde_6_fragancias_recambio.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 35,
@@ -277,7 +277,7 @@ const initialProducts = [
         "image": "images/Aperitivo_de_patata_sabor_original_Pringles.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 36,
@@ -285,7 +285,7 @@ const initialProducts = [
         "image": "images/Arándanos.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 37,
@@ -293,7 +293,7 @@ const initialProducts = [
         "image": "images/Banana.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 38,
@@ -301,7 +301,7 @@ const initialProducts = [
         "image": "images/Barquillos_rellenos_de_crema_turrón_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 39,
@@ -309,7 +309,7 @@ const initialProducts = [
         "image": "images/Barra_de_helado_sabor_vainilla,_chocolate_y_nata_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 40,
@@ -317,7 +317,7 @@ const initialProducts = [
         "image": "images/Barra_de_pan_rústica.jpg",
         "category": "Panadería y pastelería",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 41,
@@ -325,7 +325,7 @@ const initialProducts = [
         "image": "images/Barritas_de_chocolate_con_leche_Hacendado_rellenas_de_leche.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 42,
@@ -333,7 +333,7 @@ const initialProducts = [
         "image": "images/Barritas_de_galleta_bañadas_en_chocolate_con_leche_Chips_Ahoy.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 43,
@@ -341,7 +341,7 @@ const initialProducts = [
         "image": "images/Bastoncillos_de_algodón_100%_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 44,
@@ -349,7 +349,7 @@ const initialProducts = [
         "image": "images/Batido_de_chocolate_ColaCao_Energy.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 45,
@@ -357,7 +357,7 @@ const initialProducts = [
         "image": "images/Bayeta_suave_multiusos_Bosque_Verde.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 46,
@@ -365,7 +365,7 @@ const initialProducts = [
         "image": "images/Bebida_de_avena_Alitey.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 47,
@@ -373,7 +373,7 @@ const initialProducts = [
         "image": "images/Bebida_de_soja_sabor_vainilla_Hacendado_0%_azúcar.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 48,
@@ -381,7 +381,7 @@ const initialProducts = [
         "image": "images/Bebida_energética_Mango_Loco_Monster.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 49,
@@ -389,7 +389,7 @@ const initialProducts = [
         "image": "images/Bebida_Kéfir_de_coco_Hacendado.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 50,
@@ -397,7 +397,7 @@ const initialProducts = [
         "image": "images/Bebida_láctea_natural_Actimel_Danone.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 51,
@@ -405,7 +405,7 @@ const initialProducts = [
         "image": "images/Bolsa_de_basura_grande_Bosque_Verde_50L_cubo_grande.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 52,
@@ -413,7 +413,7 @@ const initialProducts = [
         "image": "images/Bolsa_de_basura_mini_Bosque_Verde_5L_cubo_pequeño.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 53,
@@ -421,7 +421,7 @@ const initialProducts = [
         "image": "images/Brochetas_de_pollo_rellenas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 54,
@@ -429,7 +429,7 @@ const initialProducts = [
         "image": "images/Brochetas_de_pollo,_pimiento_verde_y_tocino_de_cerdo_con_varilla.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 55,
@@ -437,7 +437,7 @@ const initialProducts = [
         "image": "images/Café_en_cápsula_extra_fuerte_Hacendado_compatibles_máquinas_Nespresso.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 56,
@@ -445,7 +445,7 @@ const initialProducts = [
         "image": "images/Café_molido_natural_Hacendado.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 57,
@@ -453,7 +453,7 @@ const initialProducts = [
         "image": "images/Canela_molida_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 58,
@@ -461,7 +461,7 @@ const initialProducts = [
         "image": "images/Castañas_cocidas_y_peladas_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 59,
@@ -469,7 +469,7 @@ const initialProducts = [
         "image": "images/Cepillo_dental_Medio_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 60,
@@ -477,7 +477,7 @@ const initialProducts = [
         "image": "images/Cerveza_0,0%_sin_alcohol_Falke.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 61,
@@ -485,7 +485,7 @@ const initialProducts = [
         "image": "images/Cerveza_con_sabor_a_tequila_Desperados.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 62,
@@ -493,7 +493,7 @@ const initialProducts = [
         "image": "images/Cerveza_especial_Estrella_Galicia.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 63,
@@ -501,7 +501,7 @@ const initialProducts = [
         "image": "images/Cerveza_Radler_con_zumo_natural_de_limón_Steinburg.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 64,
@@ -509,7 +509,7 @@ const initialProducts = [
         "image": "images/Cerveza_sin_gluten_Free_Damm_0,0%_sin_alcohol.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 65,
@@ -517,7 +517,7 @@ const initialProducts = [
         "image": "images/Cerveza_suave_Xibeca_Damm.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 66,
@@ -525,7 +525,7 @@ const initialProducts = [
         "image": "images/Cerveza_especial_Estrella_Galicia.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 67,
@@ -533,7 +533,7 @@ const initialProducts = [
         "image": "images/Champú_y_acondicionador_anticaspa_Classic_2_en_1_H&S.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 68,
@@ -541,7 +541,7 @@ const initialProducts = [
         "image": "images/Cif_blanqueador.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 69,
@@ -549,7 +549,7 @@ const initialProducts = [
         "image": "images/Colgador_WC_Azul_limpieza_activa_Bosque_Verde_triple_acción.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 70,
@@ -557,7 +557,7 @@ const initialProducts = [
         "image": "images/Conos_sabor_bacon_y_queso_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 71,
@@ -565,7 +565,7 @@ const initialProducts = [
         "image": "images/Coulant_de_chocolate_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 72,
@@ -573,7 +573,7 @@ const initialProducts = [
         "image": "images/Crema_al_cacao_con_avellanas_Nocilla_original.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 73,
@@ -581,7 +581,7 @@ const initialProducts = [
         "image": "images/Crema_al_cacao_con_avellanas_Nutella.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 74,
@@ -589,7 +589,7 @@ const initialProducts = [
         "image": "images/Crema_de_manos,_cara_y_cuerpo_Nivea_Soft_hidratante_intensiva.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 75,
@@ -597,7 +597,7 @@ const initialProducts = [
         "image": "images/Crepes_rellenos_de_chocolate_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 76,
@@ -605,7 +605,7 @@ const initialProducts = [
         "image": "images/Croquetas_de_pollo.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 77,
@@ -613,7 +613,7 @@ const initialProducts = [
         "image": "images/Cubos_de_hielo.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 78,
@@ -621,7 +621,7 @@ const initialProducts = [
         "image": "images/Delicias_de_pollo_Hacendado_ultracongeladas_con_empanado_a_base_de_maíz.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 79,
@@ -629,7 +629,7 @@ const initialProducts = [
         "image": "images/Dentífrico_gel_Clorofila_Fresh_2_en_1_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 80,
@@ -637,7 +637,7 @@ const initialProducts = [
         "image": "images/Desodorante_Dark_Temptation_Axe.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 81,
@@ -645,7 +645,7 @@ const initialProducts = [
         "image": "images/Detergente_ropa_jabón_natural_de_Marsella_Bosque_Verde_líquido.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 82,
@@ -653,7 +653,7 @@ const initialProducts = [
         "image": "images/Discos_desmaquillantes_Deliplus_ovalados_algodón_100%.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 83,
@@ -661,7 +661,7 @@ const initialProducts = [
         "image": "images/Ensaladilla_de_cangrejo_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 84,
@@ -669,7 +669,7 @@ const initialProducts = [
         "image": "images/Esponja_de_baño_exfoliación_intensa_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 85,
@@ -677,7 +677,7 @@ const initialProducts = [
         "image": "images/Esponja_de_baño_suave_Deliplus.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 86,
@@ -685,7 +685,7 @@ const initialProducts = [
         "image": "images/Estropajo_baño_Bosque_Verde_fibra_blanca.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 87,
@@ -693,7 +693,7 @@ const initialProducts = [
         "image": "images/Film_Transparente_Bosque_Verde_con_sierra_deslizante.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 88,
@@ -701,7 +701,7 @@ const initialProducts = [
         "image": "images/Fregona_Microfibra_Absorbente_Bosque_Verde_suelos_de_interior.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 89,
@@ -709,7 +709,7 @@ const initialProducts = [
         "image": "images/Friegasuelos_Pino_Bosque_Verde_líquido.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 90,
@@ -717,7 +717,7 @@ const initialProducts = [
         "image": "images/Galletas_Caocream_chocolate_blanco_Hacendado_rellenas_de_crema.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 91,
@@ -725,7 +725,7 @@ const initialProducts = [
         "image": "images/Galletas_caramelizadas_Lotus_Biscoff.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 92,
@@ -733,7 +733,7 @@ const initialProducts = [
         "image": "images/Galletas_Cookies_Hacendado_40%_pepitas_de_chocolate.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 93,
@@ -741,7 +741,7 @@ const initialProducts = [
         "image": "images/Galletas_mini_cookies_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 94,
@@ -749,7 +749,7 @@ const initialProducts = [
         "image": "images/Garbanzo_cocido_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 95,
@@ -757,7 +757,7 @@ const initialProducts = [
         "image": "images/Gazpacho_tradicional_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 96,
@@ -765,7 +765,7 @@ const initialProducts = [
         "image": "images/Gel_de_afeitar_piel_sensible_Gillette_con_aloe_vera.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 97,
@@ -773,7 +773,7 @@ const initialProducts = [
         "image": "images/Gel_de_baño_Dove_0%_sulfato.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 98,
@@ -781,7 +781,7 @@ const initialProducts = [
         "image": "images/Granizado_de_limón_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 99,
@@ -789,7 +789,7 @@ const initialProducts = [
         "image": "images/Guacamole_Hacendado_95%_aguacate_fresco.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 100,
@@ -797,7 +797,7 @@ const initialProducts = [
         "image": "images/Guantes_de_nitrilo_grandes.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 101,
@@ -805,7 +805,7 @@ const initialProducts = [
         "image": "images/Guantes_Grandes.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 102,
@@ -813,7 +813,7 @@ const initialProducts = [
         "image": "images/Guantes_medianos.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 103,
@@ -821,7 +821,7 @@ const initialProducts = [
         "image": "images/Helado_almendrado_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 104,
@@ -829,7 +829,7 @@ const initialProducts = [
         "image": "images/Helado_cucurucho_choco_nata_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 105,
@@ -837,7 +837,7 @@ const initialProducts = [
         "image": "images/Helado_cucurucho_de_vainilla_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 106,
@@ -845,7 +845,7 @@ const initialProducts = [
         "image": "images/Helado_mini_bombón_almendrado_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 107,
@@ -853,7 +853,7 @@ const initialProducts = [
         "image": "images/Helado_mini_cucurucho_nata_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 108,
@@ -861,7 +861,7 @@ const initialProducts = [
         "image": "images/Helado_mini_sándwich_vainilla_y_cookie_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 109,
@@ -869,7 +869,7 @@ const initialProducts = [
         "image": "images/Helado_mini_surtido_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 110,
@@ -877,7 +877,7 @@ const initialProducts = [
         "image": "images/Helado_Mochi_coco_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 111,
@@ -885,7 +885,7 @@ const initialProducts = [
         "image": "images/Helado_Mochi_mango_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 112,
@@ -893,7 +893,7 @@ const initialProducts = [
         "image": "images/Helado_sándwich_super_nata_Hacendado.jpg",
         "category": "Congelados",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 113,
@@ -901,7 +901,7 @@ const initialProducts = [
         "image": "images/Helado_vegetal_mini_a_base_de_anacardo_con_crema_de_pistacho_Hacendado.jpg",
         "category": "Golosinas y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 114,
@@ -909,7 +909,7 @@ const initialProducts = [
         "image": "images/Huevos_grandes_L.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 115,
@@ -917,7 +917,7 @@ const initialProducts = [
         "image": "images/Hummus_de_garbanzos_Hacendado_receta_clásica.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 116,
@@ -925,7 +925,7 @@ const initialProducts = [
         "image": "images/Insecticida_moscas_y_mosquitos_Bosque_Verde_sin_perfume.jpg",
         "category": "Otros",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 117,
@@ -933,7 +933,7 @@ const initialProducts = [
         "image": "images/Ketchup_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 118,
@@ -941,7 +941,7 @@ const initialProducts = [
         "image": "images/Lambrusco_dell'Emilia_rosado_espumoso_Piccolo_Giovanni.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 119,
@@ -949,7 +949,7 @@ const initialProducts = [
         "image": "images/Langostino_cocido_y_pelado_Hacendado_ultracongelado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 120,
@@ -957,7 +957,7 @@ const initialProducts = [
         "image": "images/Lasaña_boloñesa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 121,
@@ -965,7 +965,7 @@ const initialProducts = [
         "image": "images/Lavavajillas_Todo_en_1_Bosque_Verde_en_pastillas_lavado_a_máquina.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 122,
@@ -973,7 +973,7 @@ const initialProducts = [
         "image": "images/Lavavajillas_Ultra_Original_Fairy_líquido_lavado_a_mano.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 123,
@@ -981,7 +981,7 @@ const initialProducts = [
         "image": "images/Leche_semidesnatada_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 124,
@@ -989,7 +989,7 @@ const initialProducts = [
         "image": "images/Leche_semidesnatada_sin_lactosa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 125,
@@ -997,7 +997,7 @@ const initialProducts = [
         "image": "images/Lenteja_cocida_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 126,
@@ -1005,7 +1005,7 @@ const initialProducts = [
         "image": "images/Licor_crema_Puente_Pazos.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 127,
@@ -1013,7 +1013,7 @@ const initialProducts = [
         "image": "images/Licor_de_crema_de_turron.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 128,
@@ -1021,7 +1021,7 @@ const initialProducts = [
         "image": "images/Limón_exprimido_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 129,
@@ -1029,7 +1029,7 @@ const initialProducts = [
         "image": "images/Limonada_Don_Simón_light_sin_gas.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 130,
@@ -1037,7 +1037,7 @@ const initialProducts = [
         "image": "images/Limonada_Hacendado_light_sin_gas.jpg",
         "category": "Bebidas",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 131,
@@ -1045,7 +1045,7 @@ const initialProducts = [
         "image": "images/Limpiacristales_y_multiusos_Bosque_Verde_con_pistola.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 132,
@@ -1053,7 +1053,7 @@ const initialProducts = [
         "image": "images/Limpiador_WC_Spa_Bosque_Verde_en_gel.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 133,
@@ -1061,7 +1061,7 @@ const initialProducts = [
         "image": "images/Loción_corporal_reafirmante_Q10_Nivea_y_vitamina_C_piel_normal.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 134,
@@ -1069,7 +1069,7 @@ const initialProducts = [
         "image": "images/Macarrones_con_bolognesa_hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 135,
@@ -1077,7 +1077,7 @@ const initialProducts = [
         "image": "images/Mantequilla_con_sal_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 136,
@@ -1085,7 +1085,7 @@ const initialProducts = [
         "image": "images/Mayonesa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 137,
@@ -1093,7 +1093,7 @@ const initialProducts = [
         "image": "images/Merluza_empanada_pan_fino_Hacendado_ultracongelada.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 138,
@@ -1101,7 +1101,7 @@ const initialProducts = [
         "image": "images/Mermelada_de_fresa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 139,
@@ -1109,7 +1109,7 @@ const initialProducts = [
         "image": "images/Mini_burgers_de_pollo.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 140,
@@ -1117,7 +1117,7 @@ const initialProducts = [
         "image": "images/Mini_chorizo_ibérico_extra_La_Hacienda_del_ibérico.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 141,
@@ -1125,7 +1125,7 @@ const initialProducts = [
         "image": "images/Mini_tostadas_de_trigo_Minigrill_extra_finas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 142,
@@ -1133,7 +1133,7 @@ const initialProducts = [
         "image": "images/Molde_de_Aluminio_Rectangular_0,5L_Alibérico_con_tapa.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 143,
@@ -1141,7 +1141,7 @@ const initialProducts = [
         "image": "images/Mostaza_clásica_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 144,
@@ -1149,7 +1149,7 @@ const initialProducts = [
         "image": "images/Multiusos_Desinfectante_antibacterias_Bosque_Verde_sin_lejía_con_pistola.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 145,
@@ -1157,7 +1157,7 @@ const initialProducts = [
         "image": "images/Naranjas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 146,
@@ -1165,7 +1165,7 @@ const initialProducts = [
         "image": "images/Neutrogena_Spot_Controlling_Limpiador_Facial_(1_x_200_ml),_gel_limpiador_facial_con_ácido_salicílico_para_piel_propensa_al_acné,_jabón_facial_para_los_granos_persistentes.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 147,
@@ -1173,7 +1173,7 @@ const initialProducts = [
         "image": "images/Nuggets_de_pollo_Hacendado_ultracongelados.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 148,
@@ -1181,7 +1181,7 @@ const initialProducts = [
         "image": "images/Orégano_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 149,
@@ -1189,7 +1189,7 @@ const initialProducts = [
         "image": "images/Palillos_redondos_Bosque_Verde.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 150,
@@ -1197,7 +1197,7 @@ const initialProducts = [
         "image": "images/Palitos_de_surimi_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 151,
@@ -1205,7 +1205,7 @@ const initialProducts = [
         "image": "images/Pan_de_molde_blanco_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 152,
@@ -1213,7 +1213,7 @@ const initialProducts = [
         "image": "images/Pan_de_molde_blanco_sin_corteza_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 153,
@@ -1221,7 +1221,7 @@ const initialProducts = [
         "image": "images/Papel_de_Aluminio_Bosque_Verde.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 154,
@@ -1229,7 +1229,7 @@ const initialProducts = [
         "image": "images/Papel_higiénico_Doble_Rollo_Bosque_Verde.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 155,
@@ -1237,7 +1237,7 @@ const initialProducts = [
         "image": "images/Papel_higiénico_húmedo_WC_Bosque_Verde_con_aloe_vera_y_camomila.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 156,
@@ -1245,7 +1245,7 @@ const initialProducts = [
         "image": "images/Papel_higiénico_húmedo_WC_Bosque_Verde.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 157,
@@ -1253,7 +1253,7 @@ const initialProducts = [
         "image": "images/Papel_hogar_Compacto_Absorbente_Bosque_Verde.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 158,
@@ -1261,7 +1261,7 @@ const initialProducts = [
         "image": "images/Papel_vegetal_Bosque_Verde_38_x_42_cm.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 159,
@@ -1269,7 +1269,7 @@ const initialProducts = [
         "image": "images/Pasta_fresca_ravioli_ricotta_y_espinacas_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 160,
@@ -1277,7 +1277,7 @@ const initialProducts = [
         "image": "images/Pasta_fresca_tortellini_carne_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 161,
@@ -1285,7 +1285,7 @@ const initialProducts = [
         "image": "images/Patatas_fritas_clásicas_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 162,
@@ -1293,7 +1293,7 @@ const initialProducts = [
         "image": "images/Pechuga_de_pollo_braseada_Hacendado_finas_lonchas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 163,
@@ -1301,7 +1301,7 @@ const initialProducts = [
         "image": "images/Pechugas_enteras_de_pollo.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 164,
@@ -1309,7 +1309,7 @@ const initialProducts = [
         "image": "images/Pincho_tortilla_de_patata_con_cebolla_Listo_para_Comer.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 165,
@@ -1317,7 +1317,7 @@ const initialProducts = [
         "image": "images/Pizza_4_quesos_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 166,
@@ -1325,7 +1325,7 @@ const initialProducts = [
         "image": "images/Pizza_barbacoa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 167,
@@ -1333,7 +1333,7 @@ const initialProducts = [
         "image": "images/Pizza_carbonara_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 168,
@@ -1341,7 +1341,7 @@ const initialProducts = [
         "image": "images/Pizza_jamón_y_queso_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 169,
@@ -1349,7 +1349,7 @@ const initialProducts = [
         "image": "images/Pizza_margarita_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 170,
@@ -1357,7 +1357,7 @@ const initialProducts = [
         "image": "images/Pizza_pollo_y_bacón_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 171,
@@ -1365,7 +1365,7 @@ const initialProducts = [
         "image": "images/Pizza_romana_Hacendado_con_champiñones_salteados.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 172,
@@ -1373,7 +1373,7 @@ const initialProducts = [
         "image": "images/Postre_lácteo_con_arándanos_+Proteínas_Hacendado_0%_m.g_10_g_proteínas.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 173,
@@ -1381,7 +1381,7 @@ const initialProducts = [
         "image": "images/Postre_lácteo_con_fresa_+Proteínas_Hacendado_0%_m.g_10_g_proteínas.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 174,
@@ -1389,7 +1389,7 @@ const initialProducts = [
         "image": "images/Queso_grana_padano_Hacendado_en_escamas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 175,
@@ -1397,7 +1397,7 @@ const initialProducts = [
         "image": "images/Queso_lonchas_emmental_de_vaca_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 176,
@@ -1405,7 +1405,7 @@ const initialProducts = [
         "image": "images/Queso_lonchas_fundido_suave_mezcla_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 177,
@@ -1413,7 +1413,7 @@ const initialProducts = [
         "image": "images/Queso_precortado_de_cabra_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 178,
@@ -1421,7 +1421,7 @@ const initialProducts = [
         "image": "images/Queso_untar_original_Philadelphia.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 179,
@@ -1429,7 +1429,7 @@ const initialProducts = [
         "image": "images/Quitagrasas_KH-7_con_pistola.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 180,
@@ -1437,7 +1437,7 @@ const initialProducts = [
         "image": "images/Ravioli_en_lata.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 181,
@@ -1445,7 +1445,7 @@ const initialProducts = [
         "image": "images/Recambios_maquinilla_de_afeitar_Gillette_Fusion_Sport_5_hojas.jpg",
         "category": "Higiene",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 182,
@@ -1453,7 +1453,7 @@ const initialProducts = [
         "image": "images/Refresco_Coca-Cola_light.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 183,
@@ -1461,7 +1461,7 @@ const initialProducts = [
         "image": "images/Refresco_Coca-Cola_Zero_azúcar_Lata.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 184,
@@ -1469,7 +1469,7 @@ const initialProducts = [
         "image": "images/Refresco_Coca-Cola_Zero_azúcar.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 185,
@@ -1477,7 +1477,7 @@ const initialProducts = [
         "image": "images/Refresco_Coca-Cola.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 186,
@@ -1485,7 +1485,7 @@ const initialProducts = [
         "image": "images/Refresco_limón_Schweppes_original.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 187,
@@ -1493,7 +1493,7 @@ const initialProducts = [
         "image": "images/Refresco_té_al_limón_Nestea.jpg",
         "category": "Agua y refrescos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 188,
@@ -1501,7 +1501,7 @@ const initialProducts = [
         "image": "images/Rosquillas_al_cacao.jpg",
         "category": "Galletas y bollería",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 189,
@@ -1509,7 +1509,7 @@ const initialProducts = [
         "image": "images/Rúcula.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 190,
@@ -1517,7 +1517,7 @@ const initialProducts = [
         "image": "images/Sal_fina_de_mesa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 191,
@@ -1525,7 +1525,7 @@ const initialProducts = [
         "image": "images/Sal_lavavajillas_Bosque_Verde_en_grano.jpg",
         "category": "Limpieza",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 192,
@@ -1533,7 +1533,7 @@ const initialProducts = [
         "image": "images/Salchichas_cocidas_de_cerdo_estilo_Bratwurst_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 193,
@@ -1541,7 +1541,7 @@ const initialProducts = [
         "image": "images/Salchichas_cocidas_pikante_Schara_de_cerdo_ahumadas.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 194,
@@ -1549,7 +1549,7 @@ const initialProducts = [
         "image": "images/Salsa_Barbacoa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 195,
@@ -1557,7 +1557,7 @@ const initialProducts = [
         "image": "images/Salsa_Burger_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 196,
@@ -1565,7 +1565,7 @@ const initialProducts = [
         "image": "images/Salsa_César_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 197,
@@ -1573,7 +1573,7 @@ const initialProducts = [
         "image": "images/Salsa_de_tomate_Boloñesa_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 198,
@@ -1581,7 +1581,7 @@ const initialProducts = [
         "image": "images/Salsa_fresca_Carbonara_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 199,
@@ -1589,7 +1589,7 @@ const initialProducts = [
         "image": "images/Salsa_Gajo_Rústica_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 200,
@@ -1597,7 +1597,7 @@ const initialProducts = [
         "image": "images/Salsa_Pesto_con_albahaca_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 201,
@@ -1605,7 +1605,7 @@ const initialProducts = [
         "image": "images/Salsa_Ranch_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 202,
@@ -1613,7 +1613,7 @@ const initialProducts = [
         "image": "images/Salsa_Yogur_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 203,
@@ -1621,7 +1621,7 @@ const initialProducts = [
         "image": "images/Servilleta_papel_Bosque_Verde_1_capa_30_x_30_cm.jpg",
         "category": "Hogar",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 204,
@@ -1629,7 +1629,7 @@ const initialProducts = [
         "image": "images/Sirope_de_chocolate_Hacendado.jpg",
         "category": "Dulces y postres",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     },
     {
         "id": 205,
@@ -1637,7 +1637,7 @@ const initialProducts = [
         "image": "images/Snack_de_maíz_Bits_Doritos_sabor_barbacoa.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
-        "unitType": "unidades"
+        "unitType": "unidad/es"
     }
 ]
 

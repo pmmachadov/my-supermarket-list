@@ -36,7 +36,10 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    max-height: 400px;
+    margin-bottom: 30px;
+    /* Ajusta el margen inferior para aumentar el espacio vertical */
+    max-height: 300px;
+    /* Ajusta la altura máxima */
     height: 100%;
     position: relative;
 }
