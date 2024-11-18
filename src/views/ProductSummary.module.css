@@ -11,6 +11,8 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Asegúrate de que los botones se envuelvan en pantallas pequeñas */
 }
 
 .resetButton {
@@ -46,6 +48,8 @@
     margin-bottom: 30px;
     max-height: none;
     height: auto;
+    width: 100%;
+    /* Asegúrate de que la tarjeta ocupe todo el ancho disponible */
     position: relative;
     transition: box-shadow 0.3s ease;
 }
@@ -127,4 +131,17 @@
     align-items: center;
     justify-content: center;
     padding: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+    .buttonContainer {
+        flex-direction: column;
+        /* Asegúrate de que los botones se apilen verticalmente en pantallas pequeñas */
+    }
+
+    .card {
+        width: 100%;
+        /* Asegúrate de que la tarjeta ocupe todo el ancho disponible */
+    }
 }
