@@ -8,10 +8,14 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 30px;
-    max-height: 400px;
+    max-height: 350px;
     height: 100%;
     position: relative;
     transition: box-shadow 0.3s ease;
+    -webkit-transition: box-shadow 0.3s ease;
+    -moz-transition: box-shadow 0.3s ease;
+    -ms-transition: box-shadow 0.3s ease;
+    -o-transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
