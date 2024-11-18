@@ -84,6 +84,7 @@
 
 .productQuantity {
     font-size: 1rem !important;
+    text-align: -webkit-center;
 }
 
 .overlay {
