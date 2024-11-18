@@ -1499,7 +1499,7 @@ const initialProducts = [
         "id": 188,
         "name": "Rosquillas al cacao",
         "image": "images/Rosquillas_al_cacao.jpg",
-        "category": "Galletas y bollería",
+        "category": "Golosinas y postres",
         "quantity": 1.0,
         "unitType": "unidad/es"
     },

@@ -23,9 +23,6 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
         "Agua y refrescos",
         "Hogar",
         "Golosinas y postres",
-        "Congelados",
-        "Otros",
-        "Galletas y bollería"
     ];
 
     const drawerContent = (
