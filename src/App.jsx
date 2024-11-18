@@ -104,8 +104,8 @@ function App() {
                 inputProps={ { 'aria-label': 'search' } }
               />
             </div>
-            <Button color="inherit" onClick={ handleShowSummary }>
-              Ver Resumen
+            <Button color="inherit" onClick={ handleShowSummary } className={ styles.verResumenButton }>
+              Resumen
             </Button>
           </Toolbar>
         </AppBar>
