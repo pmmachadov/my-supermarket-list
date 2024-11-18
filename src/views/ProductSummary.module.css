@@ -9,22 +9,29 @@
 
 .buttonContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 20px;
 }
 
 .resetButton {
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .downloadButton {
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .homeButton {
     margin-left: 10px;
+    margin-bottom: 10px;
     background-color: #4caf50 !important;
     color: white;
+}
+
+.buttonContainer>Button {
+    margin: 0 10px;
 }
 
 .card {
