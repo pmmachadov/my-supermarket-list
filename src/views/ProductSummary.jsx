@@ -54,7 +54,7 @@ const ProductSummary = ({ products, onResetProducts, onGoHome }) => {
                     onClick={ handlePrint }
                     className={ styles.downloadButton }
                 >
-                    Descargar Lista en PDF
+                    Descargar Lista
                 </Button>
                 <Button
                     variant="contained"

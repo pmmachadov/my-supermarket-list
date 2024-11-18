@@ -2,14 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    /* Ajusta el gap para espacio horizontal y vertical */
     justify-content: center;
     padding: 20px;
 }
 
 .card {
-    flex: 1 1 calc(32% - 30px);
-    /* Ajusta el cálculo para tener en cuenta el gap */
+    flex: 1 1 calc(32% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,9 +17,7 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 30px;
-    /* Ajusta el margen inferior para aumentar el espacio vertical */
     max-height: 300px;
-    /* Ajusta la altura máxima */
     height: 100%;
     position: relative;
 }
@@ -60,8 +56,8 @@
 
 .overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 50%;
+    left: 50%;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
