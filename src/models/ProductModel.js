@@ -891,7 +891,7 @@ const initialProducts = [
         "id": 112,
         "name": "Helado sándwich super nata Hacendado",
         "image": "images/Helado_sándwich_super_nata_Hacendado.jpg",
-        "category": "Congelados",
+        "category": "Golosinas y postres",
         "quantity": 1.0,
         "unitType": "unidad/es"
     },
@@ -923,7 +923,7 @@ const initialProducts = [
         "id": 116,
         "name": "Insecticida moscas y mosquitos Bosque Verde sin perfume",
         "image": "images/Insecticida_moscas_y_mosquitos_Bosque_Verde_sin_perfume.jpg",
-        "category": "Otros",
+        "category": "Limpieza",
         "quantity": 1.0,
         "unitType": "unidad/es"
     },
@@ -1169,8 +1169,8 @@ const initialProducts = [
     },
     {
         "id": 147,
-        "name": "Nuggets de pollo Hacendado ultracongelados",
-        "image": "images/Nuggets_de_pollo_Hacendado_ultracongelados.jpg",
+        "name": "Nuggets de pollo Hacendado ultraGolosinas y postres",
+        "image": "images/Nuggets_de_pollo_Hacendado_ultraGolosinas y postres.jpg",
         "category": "Alimentos",
         "quantity": 1.0,
         "unitType": "unidad/es"
