@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .resetButton {
@@ -34,7 +35,15 @@
     margin: 0 10px;
 }
 
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .card {
+    flex: 1 1 calc(25% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,10 +51,8 @@
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    margin-bottom: 30px;
-    max-height: none;
-    height: auto;
+    margin: 30px;
+    height: 450px;
     position: relative;
     transition: box-shadow 0.3s ease;
 }
@@ -56,7 +63,7 @@
 
 .cardMedia {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
     background-color: #f0f0f0;
@@ -74,6 +81,24 @@
     text-align: left;
     width: 100%;
     margin-top: 10px;
+}
+
+.productNameOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
+    overflow: hidden;
 }
 
 .productName {
@@ -127,4 +152,65 @@
     align-items: center;
     justify-content: center;
     padding: 8px;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+    .buttonContainer {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media print {
+    .card {
+        page-break-inside: avoid;
+        border: 1px solid #000;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    .cardMedia {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        position: relative;
+    }
+
+    .cardContent {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .productDetails {
+        flex-grow: 1;
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .productName {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .productQuantity {
+        font-size: 1rem !important;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .inputField,
+    .unitTypeSelect {
+        display: none;
+    }
 }
