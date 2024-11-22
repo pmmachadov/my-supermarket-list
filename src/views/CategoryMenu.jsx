@@ -8,11 +8,12 @@ import {
     Toolbar,
     IconButton,
     Divider,
+    Button,
 } from '@mui/material';
-import { Category as CategoryIcon, Menu as MenuIcon } from '@mui/icons-material';
+import { Category as CategoryIcon, Menu as MenuIcon, Refresh as RefreshIcon } from '@mui/icons-material';
 import styles from './CategoryMenu.module.css';
 
-const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose }) => {
+const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
     const categories = [
         "Alimentos",
         "Limpieza",
@@ -51,6 +52,16 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                     </ListItem>
                 )) }
             </List>
+            <Divider className={ styles.resetButtonSeparator } />
+            <Button
+                variant="contained"
+                color="secondary"
+                startIcon={ <RefreshIcon /> }
+                onClick={ onResetProducts }
+                className={ styles.resetButton }
+            >
+                Resetear Productos
+            </Button>
         </>
     );
 
