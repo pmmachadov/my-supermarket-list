@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Drawer,
     List,
@@ -9,11 +9,31 @@ import {
     IconButton,
     Divider,
     Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
 } from '@mui/material';
 import { Category as CategoryIcon, Menu as MenuIcon, Refresh as RefreshIcon } from '@mui/icons-material';
 import styles from './CategoryMenu.module.css';
 
 const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+    const handleOpenDialog = () => {
+        setIsDialogOpen(true);
+    };
+
+    const handleCloseDialog = () => {
+        setIsDialogOpen(false);
+    };
+
+    const handleConfirmReset = () => {
+        onResetProducts();
+        handleCloseDialog();
+    };
+
     const categories = [
         "Alimentos",
         "Limpieza",
@@ -57,11 +77,32 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                 variant="contained"
                 color="secondary"
                 startIcon={ <RefreshIcon /> }
-                onClick={ onResetProducts }
+                onClick={ handleOpenDialog }
                 className={ styles.resetButton }
             >
                 Resetear Productos
             </Button>
+            <Dialog
+                open={ isDialogOpen }
+                onClose={ handleCloseDialog }
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">{ "Confirmar Reseteo" }</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        ¿Estás seguro de que deseas resetear todos los productos?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={ handleCloseDialog } color="primary">
+                        Cancelar
+                    </Button>
+                    <Button onClick={ handleConfirmReset } color="primary" autoFocus>
+                        Confirmar
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </>
     );
 
