@@ -37,6 +37,29 @@
     font-size: 0.9rem;
 }
 
+.resetButton {
+    margin: 40px 20px 20px 20px;
+    /* Aumenta el espacio superior */
+    background-color: red !important;
+    /* Cambia el color de fondo a rojo */
+    color: white !important;
+    /* Cambia el color del texto a blanco */
+    width: 100%;
+    /* Asegúrate de que el botón ocupe todo el ancho disponible */
+    padding: 40px !important;
+    /* Aumenta la altura del botón */
+    font-size: 1.5rem !important;
+    /* Aumenta el tamaño de la fuente */
+    font-weight: bold !important;
+}
+
+.resetButtonSeparator {
+    border-top: 1px solid #ccc;
+    /* Línea gris */
+    margin: 20px 0;
+    /* Espacio superior e inferior */
+}
+
 /* Media Queries */
 /* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {

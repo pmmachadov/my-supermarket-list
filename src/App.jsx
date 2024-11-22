@@ -73,6 +73,7 @@ function App() {
         onSelectCategory={ handleSelectCategory }
         open={ isMenuOpen }
         onClose={ handleCloseMenu }
+        onResetProducts={ handleResetProducts }
       />
       <main className={ styles.mainContent }>
         <AppBar position="fixed" className={ styles.appBarContent }>
@@ -104,7 +105,7 @@ function App() {
                 inputProps={ { 'aria-label': 'search' } }
               />
             </div>
-            <Button color="inherit" onClick={ handleShowSummary } className={ styles.verResumenButton }>
+            <Button color="inherit" onClick={ handleShowSummary } className={ `${styles.verResumenButton}` }>
               Resumen
             </Button>
           </Toolbar>
@@ -113,7 +114,6 @@ function App() {
           { showSummary ? (
             <ProductSummary
               products={ products }
-              onResetProducts={ handleResetProducts }
               onGoHome={ handleGoHome }
             />
           ) : (
