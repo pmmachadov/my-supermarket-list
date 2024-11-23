@@ -60,12 +60,13 @@ const ProductSummary = ({ products, onGoHome }) => {
             <Box className={ styles.cardContainer }>
                 { filteredProducts.map((product) => (
                     <Box className={ styles.card } key={ product.id }>
-                        <ProductItem
-                            product={ product }
-                            quantity={ productQuantities[product.id] }
-                            onQuantityChange={ handleQuantityChange }
-                            onUnitTypeChange={ handleUnitTypeChange }
-                        />
+                        <div className={ styles.cardMedia }>
+                            <img src={ encodeURI(product.image) } alt={ product.name } className={ styles.productImage } />
+                        </div>
+                        <div className={ styles.productDetails }>
+                            <div className={ styles.productName }>{ product.name }</div>
+                            <div className={ styles.productQuantity }>{ product.quantity } { product.unitType }</div>
+                        </div>
                     </Box>
                 )) }
             </Box>

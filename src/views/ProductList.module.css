@@ -12,9 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 30px;
     max-height: 300px;
@@ -22,16 +20,11 @@
     position: relative;
 }
 
-.card:hover {
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
-
 .cardMedia {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
-    background-color: #f0f0f0;
 }
 
 .cardContent {
@@ -51,7 +44,7 @@
 }
 
 .productQuantity {
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
 .overlay {
@@ -59,7 +52,6 @@
     bottom: 50%;
     left: 50%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 10px;
     box-sizing: border-box;
