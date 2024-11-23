@@ -19,7 +19,6 @@
     top: 5rem;
     z-index: 1301;
     background-color: #387DC7 !important;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.57);
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -39,25 +38,17 @@
 
 .resetButton {
     margin: 40px 20px 20px 20px;
-    /* Aumenta el espacio superior */
     background-color: red !important;
-    /* Cambia el color de fondo a rojo */
     color: white !important;
-    /* Cambia el color del texto a blanco */
     width: 100%;
-    /* Asegúrate de que el botón ocupe todo el ancho disponible */
     padding: 40px !important;
-    /* Aumenta la altura del botón */
     font-size: 1.5rem !important;
-    /* Aumenta el tamaño de la fuente */
     font-weight: bold !important;
 }
 
 .resetButtonSeparator {
     border-top: 1px solid #ccc;
-    /* Línea gris */
     margin: 20px 0;
-    /* Espacio superior e inferior */
 }
 
 /* Media Queries */
