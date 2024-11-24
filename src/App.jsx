@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import initialProducts from './models/ProductModel';
 import ProductList from './views/ProductList';
 import CategoryMenu from './views/CategoryMenu';
@@ -10,16 +10,19 @@ import {
   Typography,
   InputBase,
   Button,
+  Fab,
+  Box,
 } from '@mui/material';
-import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon, ArrowUpward as ArrowUpwardIcon } from '@mui/icons-material';
 import styles from './App.module.css';
 
 function App() {
+  const [showScroll, setShowScroll] = useState(false);
   const [products, setProducts] = useState(initialProducts);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,8 +34,18 @@ function App() {
 
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
-    setSearchQuery('');
-    handleCloseMenu();
+  };
+
+  const handleShowSummary = () => {
+    setShowSummary(true);
+  };
+
+  const handleGoHome = () => {
+    setShowSummary(false);
+  };
+
+  const handleResetProducts = () => {
+    setProducts(initialProducts);
   };
 
   const handleQuantityChange = (id, newQuantity) => {
@@ -51,19 +64,24 @@ function App() {
     );
   };
 
-  const handleShowSummary = () => {
-    setShowSummary(true);
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 100) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 100) {
+      setShowScroll(false);
+    }
   };
 
-  const handleResetProducts = () => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) => ({ ...product, quantity: 0 }))
-    );
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleGoHome = () => {
-    setShowSummary(false);
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop);
+    return () => {
+      window.removeEventListener('scroll', checkScrollTop);
+    };
+  }, [showScroll]);
 
   return (
     <div className={ styles.appContainer }>
@@ -105,7 +123,7 @@ function App() {
                 inputProps={ { 'aria-label': 'search' } }
               />
             </div>
-            <Button color="inherit" onClick={ handleShowSummary } className={ `${styles.verResumenButton}` }>
+            <Button color="inherit" onClick={ handleShowSummary } className={ styles.verResumenButton }>
               Resumen
             </Button>
           </Toolbar>
@@ -127,6 +145,17 @@ function App() {
           ) }
         </div>
       </main>
+      <Box className={ styles.arrowButton }>
+        <Fab
+          color="primary"
+          aria-label="scroll back to top"
+          className={ styles.scrollTop }
+          onClick={ scrollTop }
+          style={ { display: showScroll ? 'flex' : 'none' } }
+        >
+          <ArrowUpwardIcon />
+        </Fab>
+      </Box>
     </div>
   );
 }
