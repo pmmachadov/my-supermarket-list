@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from '@mui/material';
 import ProductItem from './ProductItem';
 import styles from './ProductList.module.css';
 
@@ -13,18 +12,16 @@ const ProductList = ({ products, onQuantityChange, onUnitTypeChange, selectedCat
 
     return (
         <div className={ styles.productListContainer }>
-            <Grid container spacing={ 2 }>
-                { filteredProducts.map((product) => (
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } key={ product.id }>
-                        <ProductItem
-                            product={ product }
-                            quantity={ product.quantity }
-                            onQuantityChange={ onQuantityChange }
-                            onUnitTypeChange={ onUnitTypeChange }
-                        />
-                    </Grid>
-                )) }
-            </Grid>
+            { filteredProducts.map((product) => (
+                <div className={ styles.productItemWrapper } key={ product.id }>
+                    <ProductItem
+                        product={ product }
+                        quantity={ product.quantity }
+                        onQuantityChange={ onQuantityChange }
+                        onUnitTypeChange={ onUnitTypeChange }
+                    />
+                </div>
+            )) }
         </div>
     );
 };

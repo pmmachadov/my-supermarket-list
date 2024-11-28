@@ -28,7 +28,6 @@ const ProductSummary = ({ products, onGoHome }) => {
         }));
     };
 
-    // Filtrar productos con cantidad mayor a 0
     const filteredProducts = products.filter(product => productQuantities[product.id] > 0);
 
     return (

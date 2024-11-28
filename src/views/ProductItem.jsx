@@ -10,6 +10,7 @@ import {
     MenuItem,
     FormControl,
     InputLabel,
+    Box
 } from '@mui/material';
 
 const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) => {
@@ -30,9 +31,9 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
             onMouseEnter={ handleMouseEnter }
             onMouseLeave={ handleMouseLeave }
         >
-            <div className={ styles.cardMedia }>
-                <img src={ encodeURI(`/${product.image}`) } alt={ product.name } style={ { width: '100%', borderRadius: '5px' } } />
-            </div>
+            <Box className={ styles.cardMedia }>
+                <img src={ encodeURI(`/${product.image}`) } alt={ product.name } style={ { width: '100%' } } />
+            </Box>
             <CardContent className={ styles.cardContent }>
                 <Typography variant="h6" className={ styles.productName }>
                     { product.name }
@@ -41,7 +42,7 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
                     Cantidad: { quantity } { product.unitType }
                 </Typography>
                 { isHovered && (
-                    <div className={ styles.overlay }>
+                    <Box className={ styles.overlay }>
                         <TextField
                             type="number"
                             value={ quantity ?? '' }
@@ -72,7 +73,7 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
                                 <MenuItem value="paquete/s">Paquete/s</MenuItem>
                             </Select>
                         </FormControl>
-                    </div>
+                    </Box>
                 ) }
             </CardContent>
         </Card>

@@ -51,8 +51,6 @@
     margin: 20px 0;
 }
 
-/* Media Queries */
-/* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .drawer {
         width: 200px;
@@ -71,7 +69,6 @@
     }
 }
 
-/* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .drawer {
         width: 220px;
@@ -90,7 +87,6 @@
     }
 }
 
-/* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .drawer {
         width: 240px;
@@ -109,7 +105,6 @@
     }
 }
 
-/* Large devices (large desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .drawer {
         width: 260px;
@@ -128,7 +123,6 @@
     }
 }
 
-/* Extra large devices (extra large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .drawer {
         width: 280px;

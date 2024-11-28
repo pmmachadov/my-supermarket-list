@@ -82,10 +82,10 @@
     color: black;
     font-weight: bold;
     padding: 10px;
+    margin-left: 3rem;
     font-size: 1rem;
     width: auto;
     position: absolute;
-    right: 10px;
 }
 
 .buttonContainer {
@@ -159,9 +159,7 @@
     font-weight: bold;
 }
 
-/* Media Queries */
 
-/* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .toolbar {
         flex-direction: column;
@@ -186,7 +184,6 @@
     }
 }
 
-/* Small devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .toolbar {
         flex-direction: column;
@@ -211,7 +208,6 @@
     }
 }
 
-/* Medium devices (desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .toolbar {
         flex-direction: row;
@@ -228,7 +224,6 @@
     }
 }
 
-/* Large devices (large desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .toolbar {
         flex-direction: row;
@@ -245,7 +240,6 @@
     }
 }
 
-/* Extra large devices (extra large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .toolbar {
         flex-direction: row;

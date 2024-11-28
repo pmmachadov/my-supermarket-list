@@ -1,13 +1,20 @@
 .productListContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     justify-content: center;
+    align-items: center;
+    gap: 1rem;
     padding: 20px;
+    margin: 8rem auto;
+}
+
+.productItemWrapper {
+    flex: 1 1 calc(25% - 30px);
+    display: flex;
+    justify-content: center;
 }
 
 .card {
-    flex: 1 1 calc(32% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,9 +22,9 @@
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 30px;
-    max-height: 300px;
     height: 100%;
     position: relative;
+    max-width: 300px;
 }
 
 .cardMedia {
@@ -25,6 +32,12 @@
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.cardMedia img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .cardContent {
@@ -41,6 +54,7 @@
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
+    margin-top: 10px;
 }
 
 .productQuantity {
@@ -85,4 +99,84 @@
     align-items: center;
     justify-content: center;
     padding: 8px;
+}
+
+@media (max-width: 575.98px) {
+    .buttonContainer {
+        flex-direction: column;
+    }
+
+    .productItemWrapper {
+        flex: 1 1 100%;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+
+    .cardMedia img {
+        width: 100%;
+        height: 196px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .productItemWrapper {
+        flex: 1 1 calc(50% - 30px);
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cardMedia img {
+        width: 100%;
+        height: 235px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .productItemWrapper {
+        flex: 1 1 calc(33.333% - 30px);
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cardMedia img {
+        width: 100%;
+        height: 294px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 992px) {
+    .productItemWrapper {
+        flex: 1 1 calc(25% - 30px);
+    }
+
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cardMedia img {
+        width: 100%;
+        height: 392px;
+        object-fit: contain;
+    }
 }
