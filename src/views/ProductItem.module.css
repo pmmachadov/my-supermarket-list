@@ -9,6 +9,7 @@
     justify-content: space-between;
     padding: 1rem;
     position: relative;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .card .productQuantity {
@@ -22,10 +23,16 @@
 .cardMedia {
     background-color: none;
     border-radius: 5px;
-    height: 200px;
-    object-fit: cover;
+    height: 350px;
+    object-fit: contain;
     position: relative;
     width: 100%;
+}
+
+.cardMedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .productNameOverlay {
@@ -76,6 +83,7 @@
     position: absolute;
     text-align: center;
     width: 100%;
+    height: 100%;
 }
 
 .card:hover .overlay,
@@ -109,9 +117,82 @@
     padding: 8px;
 }
 
+@media (max-width: 575px) {
+    .card {
+        height: 350px;
+    }
+
+    .cardMedia {
+        height: 175px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .card {
+        height: 400px;
+    }
+
+    .cardMedia {
+        height: 210px;
+    }
+
+    .productName {
+        font-size: 0.8rem;
+    }
+
+    .productQuantity {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card {
+        height: 450px;
+    }
+
+    .cardMedia {
+        height: 262.5px;
+    }
+
+    .productName {
+        font-size: 0.9rem;
+    }
+
+    .productQuantity {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        height: 500px;
+    }
+
+    .cardMedia {
+        height: 350px;
+    }
+
+    .productName {
+        font-size: 1rem;
+    }
+
+    .productQuantity {
+        font-size: 1.2rem;
+    }
+}
+
 @media print {
     .card {
         border: 1px solid #000;
+
         margin-bottom: 20px;
         page-break-inside: avoid;
     }
@@ -120,7 +201,7 @@
         background-color: #f0f0f0;
         border-radius: 5px;
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
         position: relative;
         width: 100%;
     }
@@ -133,27 +214,5 @@
 
     .productDetails {
         flex-grow: 1;
-        margin-top: 10px;
-        text-align: left;
-        width: 100%;
-    }
-
-    .productName {
-        font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .productQuantity {
-        font-size: 1rem;
-    }
-
-    .overlay {
-        display: none;
-    }
-
-    .inputField,
-    .unitTypeSelect {
-        display: none;
     }
 }
