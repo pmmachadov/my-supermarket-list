@@ -6,7 +6,6 @@ import {
     ListItemText,
     ListItemIcon,
     Toolbar,
-    IconButton,
     Divider,
     Button,
     Dialog,
@@ -15,7 +14,8 @@ import {
     DialogContentText,
     DialogTitle,
 } from '@mui/material';
-import { Category as CategoryIcon, Menu as MenuIcon, Refresh as RefreshIcon } from '@mui/icons-material';
+import { Category as CategoryIcon, Refresh as RefreshIcon } from '@mui/icons-material';
+import PropTypes from 'prop-types';
 import styles from './CategoryMenu.module.css';
 
 const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
@@ -120,6 +120,15 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             { drawerContent }
         </Drawer>
     );
+};
+
+CategoryMenu.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectedCategory: PropTypes.string,
+    onSelectCategory: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onResetProducts: PropTypes.func.isRequired,
 };
 
 export default CategoryMenu;

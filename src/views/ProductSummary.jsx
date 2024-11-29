@@ -1,32 +1,18 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Typography, Button, Box } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import HomeIcon from '@mui/icons-material/Home';
 import handlePrint from './handlePrint';
-import ProductItem from './ProductItem';
 import styles from './ProductSummary.module.css';
 
 const ProductSummary = ({ products, onGoHome }) => {
-    const [productQuantities, setProductQuantities] = useState(
+    const [productQuantities] = useState(
         products.reduce((acc, product) => {
             acc[product.id] = product.quantity;
             return acc;
         }, {})
     );
-
-    const handleQuantityChange = (id, newQuantity) => {
-        setProductQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [id]: newQuantity,
-        }));
-    };
-
-    const handleUnitTypeChange = (id, newUnitType) => {
-        setProductQuantities((prevQuantities) => ({
-            ...prevQuantities,
-            [id]: { ...prevQuantities[id], unitType: newUnitType },
-        }));
-    };
 
     const filteredProducts = products.filter(product => productQuantities[product.id] > 0);
 
@@ -71,6 +57,18 @@ const ProductSummary = ({ products, onGoHome }) => {
             </Box>
         </div>
     );
+};
+
+ProductSummary.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        name: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        quantity: PropTypes.number.isRequired,
+        unitType: PropTypes.string.isRequired,
+    })).isRequired,
+    onGoHome: PropTypes.func.isRequired,
 };
 
 export default ProductSummary;

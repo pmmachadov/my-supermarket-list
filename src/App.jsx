@@ -13,7 +13,7 @@ import {
   Fab,
   Box,
 } from '@mui/material';
-import { Menu as MenuIcon, Add as AddIcon, GetApp as GetAppIcon, Search as SearchIcon, ArrowUpward as ArrowUpwardIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, Search as SearchIcon, ArrowUpward as ArrowUpwardIcon } from '@mui/icons-material';
 import styles from './App.module.css';
 
 function App() {
@@ -65,9 +65,9 @@ function App() {
   };
 
   const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 100) {
+    if (!showScroll && window.scrollY > 100) {
       setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 100) {
+    } else if (showScroll && window.scrollY <= 100) {
       setShowScroll(false);
     }
   };
