@@ -123,9 +123,21 @@ function App() {
                 inputProps={ { 'aria-label': 'search' } }
               />
             </div>
-            <Button color="inherit" onClick={ handleShowSummary } className={ styles.verResumenButton }>
-              Resumen
-            </Button>
+            <div>
+              <Button
+                color="inherit"
+                onClick={ handleShowSummary }
+                style={ {
+                  fontWeight: 'bold',
+                  borderRadius: '0.4rem',
+                  backgroundColor: 'rgba(118 12 122 / 0.8)',
+                  marginLeft: '1rem',
+                  padding: '0.7rem',
+                } }
+              >
+                Resumen
+              </Button>
+            </div>
           </Toolbar>
         </AppBar>
         <div className={ styles.productContainer }>
