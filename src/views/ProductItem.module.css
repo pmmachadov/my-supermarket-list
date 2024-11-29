@@ -144,8 +144,6 @@
     }
 }
 
-/* ... Estilos existentes ... */
-
 @media (max-width: 375px) {
     .card {
         height: 320px;
@@ -172,8 +170,6 @@
     }
 
 }
-
-/* ... Continuación de estilos existentes ... */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .card {
