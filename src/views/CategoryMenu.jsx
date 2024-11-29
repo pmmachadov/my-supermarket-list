@@ -75,7 +75,6 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Divider className={ styles.resetButtonSeparator } />
             <Button
                 variant="contained"
-                color="secondary"
                 startIcon={ <RefreshIcon /> }
                 onClick={ handleOpenDialog }
                 className={ styles.resetButton }

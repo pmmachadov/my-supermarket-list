@@ -1,43 +1,43 @@
 .productListContainer {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    padding: 20px;
+    justify-content: center;
     margin: 8rem auto;
+    padding: 20px;
 }
 
 .productItemWrapper {
-    flex: 1 1 calc(25% - 30px);
     display: flex;
+    flex: 1 1 calc(25% - 30px);
     justify-content: center;
 }
 
 .card {
+    align-items: center;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 30px;
     height: 100%;
-    position: relative;
+    justify-content: space-between;
+    margin-bottom: 30px;
     max-width: 300px;
+    padding: 10px;
+    position: relative;
 }
 
 .cardMedia {
-    width: 100%;
+    border-radius: 5px;
     height: auto;
     object-fit: cover;
-    border-radius: 5px;
+    width: 100%;
 }
 
 .cardMedia img {
-    width: 100%;
     height: auto;
     object-fit: cover;
+    width: 100%;
 }
 
 .cardContent {
@@ -53,8 +53,8 @@
 .productName {
     font-size: 1rem;
     font-weight: bold;
-    text-align: center;
     margin-top: 10px;
+    text-align: center;
 }
 
 .productQuantity {
@@ -62,15 +62,15 @@
 }
 
 .overlay {
-    position: absolute;
     bottom: 50%;
-    left: 50%;
-    width: 100%;
-    color: white;
-    padding: 10px;
     box-sizing: border-box;
-    text-align: center;
+    color: white;
     display: none;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
 
 .card:hover .overlay,
@@ -79,24 +79,24 @@
 }
 
 .inputField {
-    width: 100%;
-    margin-top: 10px;
     background-color: white;
     border-radius: 5px;
+    margin-top: 10px;
     padding: 5px;
+    width: 100%;
 }
 
 .unitTypeSelect {
-    width: 100%;
-    margin-top: 10px;
     background-color: white;
     border-radius: 5px;
+    margin-top: 10px;
     padding: 5px;
+    width: 100%;
 }
 
 .actions {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     padding: 8px;
 }
@@ -124,9 +124,9 @@
     }
 
     .cardMedia img {
-        width: 100%;
         height: 196px;
         object-fit: contain;
+        width: 100%;
     }
 }
 
@@ -141,9 +141,9 @@
     }
 
     .cardMedia img {
-        width: 100%;
         height: 235px;
         object-fit: contain;
+        width: 100%;
     }
 }
 
@@ -158,9 +158,9 @@
     }
 
     .cardMedia img {
-        width: 100%;
         height: 294px;
         object-fit: contain;
+        width: 100%;
     }
 }
 
@@ -175,8 +175,8 @@
     }
 
     .cardMedia img {
-        width: 100%;
         height: 392px;
         object-fit: contain;
+        width: 100%;
     }
 }

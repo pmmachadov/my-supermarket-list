@@ -2,6 +2,7 @@
     align-items: center;
     border: none;
     border-radius: 10px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.7);
     display: flex;
     flex: 1 1 calc(25% - 1rem);
     flex-direction: column;
@@ -9,7 +10,6 @@
     justify-content: space-between;
     padding: 1rem;
     position: relative;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .card .productQuantity {
@@ -30,9 +30,9 @@
 }
 
 .cardMedia img {
-    width: 100%;
     height: 100%;
     object-fit: contain;
+    width: 100%;
 }
 
 .productNameOverlay {
@@ -78,12 +78,12 @@
     box-sizing: border-box;
     color: white;
     display: none;
+    height: 100%;
     left: 0;
     padding: 10px;
     position: absolute;
     text-align: center;
     width: 100%;
-    height: 100%;
 }
 
 .card:hover .overlay,
@@ -192,7 +192,6 @@
 @media print {
     .card {
         border: 1px solid #000;
-
         margin-bottom: 20px;
         page-break-inside: avoid;
     }
