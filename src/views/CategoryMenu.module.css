@@ -5,7 +5,7 @@
 }
 
 .drawerPaper {
-    width: auto;
+    width: 75%;
 }
 
 .nested {
@@ -14,7 +14,7 @@
 
 .menuButton {
     align-items: center;
-    background-color: #387DC7 !important;
+    background-color: #387DC7;
     border-radius: 50%;
     display: flex;
     height: 48px;
@@ -29,10 +29,6 @@
 .listItem {
     padding-bottom: 4px;
     padding-top: 4px;
-}
-
-.listItemText {
-    font-size: 0.9rem;
 }
 
 .drawerPaper .resetButton {
@@ -50,9 +46,36 @@
     margin: 40px 0;
 }
 
+@media (max-width: 374px) {
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .menuButton {
+        align-items: center;
+        background-color: #387DC7 !important;
+        border-radius: 50%;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: 1rem;
+        position: fixed;
+        top: 4rem;
+        width: 40px;
+        z-index: 1301;
+    }
+
+    .listItem {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+}
+
 @media (max-width: 575.98px) {
     .drawer {
-        width: 200px;
+        width: 75%;
     }
 
     .menuButton {
@@ -70,19 +93,19 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .drawer {
-        width: 220px;
+        width: 200px;
     }
 
     .menuButton {
-        height: 44px;
-        left: 1.5rem;
-        top: 4.5rem;
-        width: 44px;
+        height: 40px;
+        left: 1rem;
+        top: 4rem;
+        width: 40px;
     }
 
     .listItem {
-        padding-bottom: 3px;
-        padding-top: 3px;
+        padding-bottom: 2px;
+        padding-top: 2px;
     }
 }
 

@@ -6,7 +6,6 @@ import {
     ListItemText,
     ListItemIcon,
     Toolbar,
-    IconButton,
     Divider,
     Button,
     Dialog,
@@ -15,7 +14,8 @@ import {
     DialogContentText,
     DialogTitle,
 } from '@mui/material';
-import { Category as CategoryIcon, Menu as MenuIcon, Refresh as RefreshIcon } from '@mui/icons-material';
+import { Category as CategoryIcon, Refresh as RefreshIcon } from '@mui/icons-material';
+import PropTypes from 'prop-types';
 import styles from './CategoryMenu.module.css';
 
 const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
@@ -60,7 +60,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                 { categories.map((category, index) => (
                     <ListItem
                         button={ true }
-                        key={ index }
+                        key={ category }
                         selected={ category === selectedCategory }
                         onClick={ () => {
                             onSelectCategory(category);
@@ -75,6 +75,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Divider className={ styles.resetButtonSeparator } />
             <Button
                 variant="contained"
+                color="secondary"
                 startIcon={ <RefreshIcon /> }
                 onClick={ handleOpenDialog }
                 className={ styles.resetButton }
@@ -119,6 +120,15 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             { drawerContent }
         </Drawer>
     );
+};
+
+CategoryMenu.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectedCategory: PropTypes.string,
+    onSelectCategory: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onResetProducts: PropTypes.func.isRequired,
 };
 
 export default CategoryMenu;
