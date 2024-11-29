@@ -130,10 +130,50 @@
         font-size: 0.7rem;
     }
 
+
+    .productItemWrapper {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
     .productQuantity {
         font-size: 0.9rem;
     }
 }
+
+/* ... Estilos existentes ... */
+
+@media (max-width: 375px) {
+    .card {
+        height: 320px;
+    }
+
+    .cardMedia {
+        height: 180px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+
+    .productItemWrapper {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/* ... Continuación de estilos existentes ... */
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .card {

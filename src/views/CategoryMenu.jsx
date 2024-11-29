@@ -60,7 +60,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                 { categories.map((category, index) => (
                     <ListItem
                         button={ true }
-                        key={ index }
+                        key={ category }
                         selected={ category === selectedCategory }
                         onClick={ () => {
                             onSelectCategory(category);
@@ -75,6 +75,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Divider className={ styles.resetButtonSeparator } />
             <Button
                 variant="contained"
+                color="secondary"
                 startIcon={ <RefreshIcon /> }
                 onClick={ handleOpenDialog }
                 className={ styles.resetButton }

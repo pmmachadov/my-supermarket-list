@@ -1,34 +1,33 @@
 .appContainer {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .mainContent {
-    background: linear-gradient(135deg, #e0eafc 0%, #314157 100%);
     flex-grow: 1;
     padding-top: 64px;
     width: 100%;
+    background: linear-gradient(135deg, #e0eafc 0%, #314157 100%);
 }
 
 .appBarContent {
-    align-items: center;
-    width: 100%;
     z-index: 1300;
+    width: 100%;
+    align-items: center;
 }
 
 .toolbar {
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     min-height: 64px;
+    display: flex;
+    justify-content: space-between;
     width: 80%;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .title {
     flex-grow: 1;
-    margin-left: 1rem;
     text-align: center;
 }
 
@@ -39,11 +38,12 @@
 .productContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1200px;
+    justify-content: center;
+    /* Centra las tarjetas */
     padding: 1rem;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .search {
@@ -133,14 +133,95 @@
 }
 
 .card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 16px;
-
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    max-width: 300px;
+    padding: 10px;
+    position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
         0 8px 12px rgba(0, 0, 0, 0.1),
         0 12px 24px rgba(0, 0, 0, 0.1),
         0 16px 32px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.cardMedia {
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cardMedia img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cardContent {
+    text-align: center;
+}
+
+.productDetails {
+    flex-grow: 1;
+    text-align: left;
+    width: 100%;
+}
+
+.productName {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.productQuantity {
+    font-size: 1rem;
+}
+
+.overlay {
+    bottom: 50%;
+    box-sizing: border-box;
+    color: white;
+    display: none;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.card:hover .overlay,
+.card:focus-within .overlay {
+    display: block;
+}
+
+.inputField {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.unitTypeSelect {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.actions {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
 }
 
 @media (max-width: 575.98px) {
@@ -164,6 +245,56 @@
 
     .verResumenButton {
         margin-top: 10px;
+    }
+
+    .productContainer {
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        height: 350px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .cardMedia {
+        height: 175px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .productContainer {
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        height: 320px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .cardMedia {
+        height: 180px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
     }
 }
 
@@ -189,6 +320,30 @@
     .verResumenButton {
         margin-top: 10px;
     }
+
+    .productContainer {
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        height: 400px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .cardMedia {
+        height: 210px;
+    }
+
+    .productName {
+        font-size: 0.8rem;
+    }
+
+    .productQuantity {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -205,6 +360,30 @@
     .title {
         font-size: 1.6rem;
     }
+
+    .productContainer {
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        height: 450px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .cardMedia {
+        height: 262.5px;
+    }
+
+    .productName {
+        font-size: 0.9rem;
+    }
+
+    .productQuantity {
+        font-size: 1.1rem;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -220,6 +399,30 @@
 
     .title {
         font-size: 1.8rem;
+    }
+
+    .productContainer {
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        height: 500px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .cardMedia {
+        height: 350px;
+    }
+
+    .productName {
+        font-size: 1rem;
+    }
+
+    .productQuantity {
+        font-size: 1.2rem;
     }
 }
 

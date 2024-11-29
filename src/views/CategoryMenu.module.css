@@ -14,7 +14,7 @@
 
 .menuButton {
     align-items: center;
-    background-color: #387DC7 !important;
+    background-color: #387DC7;
     border-radius: 50%;
     display: flex;
     height: 48px;
@@ -32,7 +32,7 @@
 }
 
 .listItemText {
-    font-size: 0.9rem;
+    /* Estilos necesarios */
 }
 
 .drawerPaper .resetButton {
@@ -50,7 +50,34 @@
     margin: 40px 0;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 374px) {
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .menuButton {
+        align-items: center;
+        background-color: #387DC7 !important;
+        border-radius: 50%;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        position: fixed;
+        top: 4rem;
+        left: 1rem;
+        width: 40px;
+        z-index: 1301;
+    }
+
+    .listItem {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575.98px) {
     .drawer {
         width: 200px;
     }

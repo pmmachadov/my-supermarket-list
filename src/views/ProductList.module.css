@@ -102,6 +102,31 @@
 }
 
 @media (max-width: 575.98px) {
+    .card {
+        height: 350px;
+        max-width: 100px;
+    }
+
+    .cardMedia {
+        height: 175px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+
+    .productListContainer {
+        padding: 0;
+        width: auto;
+    }
+}
+
+
+@media (max-width: 575.98px) {
     .buttonContainer {
         flex-direction: column;
     }
@@ -113,6 +138,7 @@
     .card {
         max-width: 100%;
         width: 100%;
+        height: 350px;
     }
 
     .productName {
@@ -127,6 +153,28 @@
         height: 196px;
         object-fit: contain;
         width: 100%;
+    }
+
+    .cardMedia {
+        height: 175px;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+        height: 320px;
+    }
+
+    .cardMedia {
+        height: 180px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
     }
 }
 
