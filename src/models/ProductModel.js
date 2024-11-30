@@ -1169,8 +1169,8 @@ const initialProducts = [
     },
     {
         "id": 147,
-        "name": "Nuggets de pollo Hacendado ultraGolosinas y postres",
-        "image": "images/Nuggets_de_pollo_Hacendado_ultraGolosinas y postres.jpg",
+        "name": "Nuggets de pollo Hacendado",
+        "image": "images/Nuggets_de_pollo_Hacendado.jpg",
         "category": "Alimentos",
         "quantity": 0,
         "unitType": "unidad/es"
