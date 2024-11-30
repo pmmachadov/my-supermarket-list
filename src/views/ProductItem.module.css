@@ -1,37 +1,43 @@
 .card {
     align-items: center;
+    background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 30px;
     max-width: 300px;
+    min-height: 450px;
     padding: 10px;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-        0 8px 12px rgba(0, 0, 0, 0.1),
-        0 12px 24px rgba(0, 0, 0, 0.1),
-        0 16px 32px rgba(0, 0, 0, 0.1);
-    background-color: white;
+
+}
+
+.productCardContainer .card {
+    box-shadow: 0 8px 16px rgba(0, 0, 2, 0.2),
+        0 16px 24px rgba(4, 2, 0, 0.2),
+        0 24px 48px rgba(0, 2, 0, 0.2),
+        0 32px 64px rgba(2, 0, 0, 0.2);
 }
 
 .card .productQuantity {
     color: midnightblue;
     font-size: 1rem;
     font-weight: bold;
+    height: 550px;
     margin-top: 10px;
     text-align: -webkit-center;
 }
 
 .cardMedia {
     border-radius: 5px;
-    height: auto;
+    height: 150px;
     object-fit: cover;
     width: 100%;
 }
 
 .cardMedia img {
-    height: auto;
+    height: 100%;
     object-fit: cover;
     width: 100%;
 }
@@ -53,22 +59,30 @@
     top: 10px;
 }
 
+.cardContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
 .productDetails {
     flex-grow: 1;
     text-align: left;
     width: 100%;
-    font-size: 0.4rem;
-    margin-top: 10px;
 }
 
 .card .productName {
+    display: inline-block;
     font-size: 1rem;
     font-weight: bold;
     margin-top: 10px;
-    text-align: center;
-    display: inline-block;
     max-width: 50ch;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 14rem;
@@ -117,13 +131,13 @@
 }
 
 .addButton {
-    margin-top: 10px;
-    padding: 10px 20px;
     background-color: #4caf50;
-    color: white;
     border: none;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
 }
 
 .addButton:hover {
@@ -132,7 +146,7 @@
 
 @media (max-width: 575px) {
     .card {
-        height: 350px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -143,13 +157,12 @@
         font-size: 0.7rem;
     }
 
-
     .productItemWrapper {
-        flex: 1 1 100%;
         display: flex;
+        flex: 1 1 100%;
         justify-content: center;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
     .productQuantity {
@@ -159,7 +172,7 @@
 
 @media (max-width: 375px) {
     .card {
-        height: 320px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -175,18 +188,17 @@
     }
 
     .productItemWrapper {
-        flex: 1 1 100%;
         display: flex;
+        flex: 1 1 100%;
         justify-content: center;
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
-
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .card {
-        height: 400px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -204,7 +216,7 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     .card {
-        height: 450px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -222,7 +234,7 @@
 
 @media (min-width: 992px) {
     .card {
-        height: 500px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -241,6 +253,7 @@
 @media print {
     .card {
         border: 1px solid #000;
+        height: 550px;
         margin-bottom: 20px;
         page-break-inside: avoid;
     }
