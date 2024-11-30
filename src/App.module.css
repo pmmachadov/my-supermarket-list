@@ -1,4 +1,3 @@
-/* Selectores de clase */
 .card:hover .overlay,
 .card:focus-within .overlay {
     display: block;
@@ -168,26 +167,13 @@
     width: 100%;
 }
 
-.verResumenButton {
-    background-color: violet;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: auto;
-    padding: 20px;
-}
 
-/* Selectores de clase con descendientes */
 .inputRoot .inputInput {
     color: inherit;
     margin-left: 3rem;
     width: 100%;
 }
 
-/* Selectores de clase con pseudo-clases */
 
 /* Media queries */
 @media (max-width: 575.98px) {
