@@ -19,6 +19,7 @@ import styles from './App.module.css';
 function App() {
   const [showScroll, setShowScroll] = useState(false);
   const [products, setProducts] = useState(initialProducts);
+  const [summaryProducts, setSummaryProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSummary, setShowSummary] = useState(false);
@@ -46,14 +47,40 @@ function App() {
 
   const handleResetProducts = () => {
     setProducts(initialProducts);
+    setSummaryProducts([]);
+    localStorage.removeItem('products');
+    localStorage.removeItem('summaryProducts');
   };
 
   const handleQuantityChange = (id, newQuantity) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
+    setProducts((prevProducts) => {
+      const updatedProducts = prevProducts.map((product) =>
         product.id === id ? { ...product, quantity: newQuantity } : product
-      )
-    );
+      );
+
+      const updatedProduct = updatedProducts.find((product) => product.id === id);
+
+      // Actualizar summaryProducts
+      setSummaryProducts((prevSummaryProducts) => {
+        if (newQuantity > 0) {
+          const existingProduct = prevSummaryProducts.find((p) => p.id === id);
+          if (existingProduct) {
+            // Actualizar la cantidad del producto existente
+            return prevSummaryProducts.map((p) =>
+              p.id === id ? { ...p, quantity: newQuantity } : p
+            );
+          } else {
+            // Agregar nuevo producto al resumen
+            return [...prevSummaryProducts, { ...updatedProduct }];
+          }
+        } else {
+          // Eliminar producto del resumen si la cantidad es 0
+          return prevSummaryProducts.filter((p) => p.id !== id);
+        }
+      });
+
+      return updatedProducts;
+    });
   };
 
   const handleUnitTypeChange = (id, newUnitType) => {
@@ -62,6 +89,21 @@ function App() {
         product.id === id ? { ...product, unitType: newUnitType } : product
       )
     );
+  };
+
+  const handleAddToSummary = (product) => {
+    setSummaryProducts((prevSummaryProducts) => {
+      const existingProduct = prevSummaryProducts.find((p) => p.id === product.id);
+      if (existingProduct) {
+        // Actualizar la cantidad del producto existente
+        return prevSummaryProducts.map((p) =>
+          p.id === product.id ? { ...p, quantity: product.quantity } : p
+        );
+      } else {
+        // Añadir nuevo producto al resumen
+        return [...prevSummaryProducts, { ...product }];
+      }
+    });
   };
 
   const checkScrollTop = () => {
@@ -82,6 +124,28 @@ function App() {
       window.removeEventListener('scroll', checkScrollTop);
     };
   }, [showScroll]);
+
+  useEffect(() => {
+    localStorage.setItem('products', JSON.stringify(products));
+  }, [products]);
+
+  useEffect(() => {
+    localStorage.setItem('summaryProducts', JSON.stringify(summaryProducts));
+  }, [summaryProducts]);
+
+  useEffect(() => {
+    const storedProducts = localStorage.getItem('products');
+    if (storedProducts) {
+      setProducts(JSON.parse(storedProducts));
+    } else {
+      setProducts(initialProducts);
+    }
+
+    const storedSummary = localStorage.getItem('summaryProducts');
+    if (storedSummary) {
+      setSummaryProducts(JSON.parse(storedSummary));
+    }
+  }, []);
 
   return (
     <div className={ styles.appContainer }>
@@ -143,7 +207,7 @@ function App() {
         <div className={ styles.productContainer }>
           { showSummary ? (
             <ProductSummary
-              products={ products }
+              products={ summaryProducts }
               onGoHome={ handleGoHome }
             />
           ) : (
@@ -153,6 +217,7 @@ function App() {
               searchQuery={ searchQuery }
               onQuantityChange={ handleQuantityChange }
               onUnitTypeChange={ handleUnitTypeChange }
+              onAddToSummary={ handleAddToSummary }
             />
           ) }
         </div>

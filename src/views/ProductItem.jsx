@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductItem.module.css';
 import {
@@ -6,31 +6,19 @@ import {
     CardContent,
     Typography,
     TextField,
-    Select,
-    MenuItem,
+    Radio,
+    RadioGroup,
+    FormControlLabel,
     FormControl,
-    InputLabel,
+    FormLabel,
     Box
 } from '@mui/material';
 
 const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const anchorRef = useRef(null);
 
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
 
     return (
-        <Card
-            className={ styles.card }
-            onMouseEnter={ handleMouseEnter }
-            onMouseLeave={ handleMouseLeave }
-        >
+        <Card className={ styles.card }>
             <Box className={ styles.cardMedia }>
                 <img src={ encodeURI(`/${product.image}`) } alt={ product.name } style={ { width: '100%' } } />
             </Box>
@@ -41,40 +29,29 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
                 <Typography variant="body2" className={ styles.productQuantity }>
                     Cantidad: { quantity } { product.unitType }
                 </Typography>
-                { isHovered && (
-                    <Box className={ styles.overlay }>
-                        <TextField
-                            type="number"
-                            value={ quantity ?? '' }
-                            onChange={ (e) => onQuantityChange(product.id, parseFloat(e.target.value)) }
-                            className={ styles.inputField }
-                            slotProps={ { htmlInput: { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } } }
-                        />
-                        <FormControl className={ styles.unitTypeSelect } ref={ anchorRef }>
-                            <InputLabel id={ `unit-type-label-${product.id}` }></InputLabel>
-                            <Select
-                                labelId={ `unit-type-label-${product.id}` }
-                                value={ product.unitType || 'unidad/es' }
-                                onChange={ (e) => onUnitTypeChange(product.id, e.target.value) }
-                                MenuProps={ {
-                                    anchorEl: anchorRef.current,
-                                    anchorOrigin: {
-                                        vertical: 'bottom',
-                                        horizontal: 'center',
-                                    },
-                                    transformOrigin: {
-                                        vertical: 'top',
-                                        horizontal: 'center',
-                                    },
-                                    getContentAnchorEl: null,
-                                } }
-                            >
-                                <MenuItem value="unidad/es">Unidad/es</MenuItem>
-                                <MenuItem value="paquete/s">Paquete/s</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Box>
-                ) }
+                <Box className={ styles.inputField }>
+                    <TextField
+                        type="number"
+                        label="Cantidad"
+                        value={ quantity ?? '' }
+                        onChange={ (e) => onQuantityChange(product.id, parseFloat(e.target.value)) }
+                        inputProps={ { min: 0, step: 0.1, inputMode: 'decimal', pattern: '[0-9]*' } }
+                        fullWidth
+                    />
+                </Box>
+                <FormControl component="fieldset" className={ styles.unitTypeSelect }>
+                    <FormLabel component="legend">Tipo de Unidad</FormLabel>
+                    <RadioGroup
+                        row
+                        aria-label="unitType"
+                        name="unitType"
+                        value={ product.unitType || 'unidad/es' }
+                        onChange={ (e) => onUnitTypeChange(product.id, e.target.value) }
+                    >
+                        <FormControlLabel value="unidad/es" control={ <Radio /> } label="Unidad/es" />
+                        <FormControlLabel value="paquete/s" control={ <Radio /> } label="Paquete/s" />
+                    </RadioGroup>
+                </FormControl>
             </CardContent>
         </Card>
     );
@@ -83,14 +60,15 @@ const ProductItem = ({ product, quantity, onQuantityChange, onUnitTypeChange }) 
 ProductItem.propTypes = {
     product: PropTypes.shape({
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-        name: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
+        name: PropTypes.string,
+        image: PropTypes.string,
         quantity: PropTypes.number,
         unitType: PropTypes.string,
     }).isRequired,
-    quantity: PropTypes.number.isRequired,
-    onQuantityChange: PropTypes.func.isRequired,
-    onUnitTypeChange: PropTypes.func.isRequired,
+    quantity: PropTypes.number,
+    onQuantityChange: PropTypes.func,
+    onUnitTypeChange: PropTypes.func,
+    onAddToSummary: PropTypes.func.isRequired,
 };
 
 export default ProductItem;

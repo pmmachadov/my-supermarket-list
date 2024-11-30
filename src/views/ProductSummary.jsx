@@ -7,14 +7,7 @@ import handlePrint from './handlePrint';
 import styles from './ProductSummary.module.css';
 
 const ProductSummary = ({ products, onGoHome }) => {
-    const [productQuantities] = useState(
-        products.reduce((acc, product) => {
-            acc[product.id] = product.quantity;
-            return acc;
-        }, {})
-    );
-
-    const filteredProducts = products.filter(product => productQuantities[product.id] > 0);
+    const filteredProducts = products.filter(product => product.quantity > 0);
 
     return (
         <div id="product-summary" className={ styles.summaryContainer }>
@@ -46,7 +39,7 @@ const ProductSummary = ({ products, onGoHome }) => {
                 { filteredProducts.map((product) => (
                     <Box className={ styles.card } key={ product.id }>
                         <div className={ styles.cardMedia }>
-                            <img src={ encodeURI(product.image) } alt={ product.name } className={ styles.productImage } />
+                            <img src={ encodeURI(`/${product.image}`) } alt={ product.name } className={ styles.productImage } />
                         </div>
                         <div className={ styles.productDetails }>
                             <div className={ styles.productName }>{ product.name }</div>
@@ -64,7 +57,6 @@ ProductSummary.propTypes = {
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
         name: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
-        category: PropTypes.string.isRequired,
         quantity: PropTypes.number.isRequired,
         unitType: PropTypes.string.isRequired,
     })).isRequired,

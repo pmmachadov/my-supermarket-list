@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
     Drawer,
     List,
-    ListItem,
+    ListItemButton,
     ListItemText,
     ListItemIcon,
     Toolbar,
@@ -51,15 +51,14 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             <Toolbar />
             <Divider />
             <List component="nav">
-                <ListItem button={ true } onClick={ () => onSelectCategory(null) } className={ styles.listItem }>
+                <ListItemButton onClick={ () => onSelectCategory(null) } className={ styles.listItem }>
                     <ListItemIcon>
                         <CategoryIcon />
                     </ListItemIcon>
                     <ListItemText primary="Todo" classes={ { primary: styles.listItemText } } />
-                </ListItem>
+                </ListItemButton>
                 { categories.map((category, index) => (
-                    <ListItem
-                        button={ true }
+                    <ListItemButton
                         key={ category }
                         selected={ category === selectedCategory }
                         onClick={ () => {
@@ -69,7 +68,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                         className={ styles.listItem }
                     >
                         <ListItemText primary={ category } classes={ { primary: styles.listItemText } } />
-                    </ListItem>
+                    </ListItemButton>
                 )) }
             </List>
             <Divider className={ styles.resetButtonSeparator } />
@@ -91,7 +90,7 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
                 <DialogTitle id="alert-dialog-title">{ "Confirmar Reseteo" }</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        ¿Estás seguro de que deseas resetear todos los productos?
+                        ¿Resetear productos?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -112,9 +111,6 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
             open={ open }
             onClose={ onClose }
             classes={ { paper: styles.drawerPaper } }
-            ModalProps={ {
-                keepMounted: true,
-            } }
             variant="temporary"
         >
             { drawerContent }
