@@ -18,8 +18,14 @@ import styles from './App.module.css';
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
-  const [products, setProducts] = useState(initialProducts);
-  const [summaryProducts, setSummaryProducts] = useState([]);
+  const [products, setProducts] = useState(() => {
+    const storedProducts = localStorage.getItem('products');
+    return storedProducts ? JSON.parse(storedProducts) : initialProducts;
+  });
+  const [summaryProducts, setSummaryProducts] = useState(() => {
+    const storedSummaryProducts = localStorage.getItem('summaryProducts');
+    return storedSummaryProducts ? JSON.parse(storedSummaryProducts) : [];
+  });
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSummary, setShowSummary] = useState(false);
@@ -132,20 +138,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('summaryProducts', JSON.stringify(summaryProducts));
   }, [summaryProducts]);
-
-  useEffect(() => {
-    const storedProducts = localStorage.getItem('products');
-    if (storedProducts) {
-      setProducts(JSON.parse(storedProducts));
-    } else {
-      setProducts(initialProducts);
-    }
-
-    const storedSummary = localStorage.getItem('summaryProducts');
-    if (storedSummary) {
-      setSummaryProducts(JSON.parse(storedSummary));
-    }
-  }, []);
 
   return (
     <div className={ styles.appContainer }>

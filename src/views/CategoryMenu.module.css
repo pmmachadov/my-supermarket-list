@@ -71,6 +71,10 @@
         padding-bottom: 4px;
         padding-top: 4px;
     }
+
+    .drawerPaper {
+        width: 60%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -89,6 +93,10 @@
         padding-bottom: 2px;
         padding-top: 2px;
     }
+
+    .drawerPaper {
+        width: 60%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -106,6 +114,10 @@
     .listItem {
         padding-bottom: 2px;
         padding-top: 2px;
+    }
+
+    .drawerPaper {
+        width: 60%;
     }
 }
 
