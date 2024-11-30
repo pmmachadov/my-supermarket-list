@@ -3,24 +3,25 @@ import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 import styles from './ProductList.module.css';
 
-const ProductList = ({ products, onQuantityChange, onUnitTypeChange, selectedCategory, searchQuery }) => {
-    const filteredProducts = products.filter(
-        (product) =>
-            (selectedCategory === null || product.category === selectedCategory) &&
+const ProductList = ({ products, selectedCategory, searchQuery, onQuantityChange, onUnitTypeChange, onAddToSummary }) => {
+    const filteredProducts = products.filter((product) => {
+        return (
+            (!selectedCategory || product.category === selectedCategory) &&
             product.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+        );
+    });
 
     return (
         <div className={ styles.productListContainer }>
             { filteredProducts.map((product) => (
-                <div className={ styles.productItemWrapper } key={ product.id }>
-                    <ProductItem
-                        product={ product }
-                        quantity={ product.quantity }
-                        onQuantityChange={ onQuantityChange }
-                        onUnitTypeChange={ onUnitTypeChange }
-                    />
-                </div>
+                <ProductItem
+                    key={ product.id }
+                    product={ product }
+                    quantity={ product.quantity }
+                    onQuantityChange={ onQuantityChange }
+                    onUnitTypeChange={ onUnitTypeChange }
+                    onAddToSummary={ onAddToSummary }
+                />
             )) }
         </div>
     );
@@ -28,10 +29,11 @@ const ProductList = ({ products, onQuantityChange, onUnitTypeChange, selectedCat
 
 ProductList.propTypes = {
     products: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectedCategory: PropTypes.string,
+    searchQuery: PropTypes.string.isRequired,
     onQuantityChange: PropTypes.func.isRequired,
     onUnitTypeChange: PropTypes.func.isRequired,
-    selectedCategory: PropTypes.string,
-    searchQuery: PropTypes.string,
+    onAddToSummary: PropTypes.func.isRequired,
 };
 
 export default ProductList;

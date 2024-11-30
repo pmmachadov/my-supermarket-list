@@ -1,37 +1,38 @@
 .card {
     align-items: center;
-    border: none;
     border-radius: 10px;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.7);
     display: flex;
-    flex: 1 1 calc(25% - 1rem);
     flex-direction: column;
-    height: 450px;
     justify-content: space-between;
-    padding: 1rem;
+    margin-bottom: 30px;
+    max-width: 300px;
+    padding: 10px;
     position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+        0 8px 12px rgba(0, 0, 0, 0.1),
+        0 12px 24px rgba(0, 0, 0, 0.1),
+        0 16px 32px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .card .productQuantity {
     color: midnightblue;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-top: 10px;
     text-align: -webkit-center;
 }
 
 .cardMedia {
-    background-color: none;
     border-radius: 5px;
-    height: 350px;
-    object-fit: contain;
-    position: relative;
+    height: auto;
+    object-fit: cover;
     width: 100%;
 }
 
 .cardMedia img {
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -53,20 +54,21 @@
 }
 
 .productDetails {
-    display: flex;
     flex-grow: 1;
+    text-align: left;
+    width: 100%;
     font-size: 0.4rem;
     margin-top: 10px;
-    text-align: left;
-    width: 10rem;
 }
 
 .card .productName {
-    display: inline-block;
     font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
     max-width: 50ch;
     overflow: hidden;
-    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 14rem;
@@ -102,11 +104,8 @@
 .unitTypeSelect {
     background-color: white;
     border-radius: 5px;
-    bottom: 0;
-    left: 0;
     margin-top: 10px;
     padding: 5px;
-    position: static;
     width: 100%;
 }
 
@@ -115,6 +114,20 @@
     display: flex;
     justify-content: center;
     padding: 8px;
+}
+
+.addButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    background-color: #45a049;
 }
 
 @media (max-width: 575px) {
