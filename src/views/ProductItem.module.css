@@ -150,7 +150,7 @@
     }
 
     .cardMedia {
-        height: 175px;
+        height: auto;
     }
 
     .productName {
