@@ -1,5 +1,3 @@
-import initialProducts from '../models/ProductModel';
-
 export const increaseQuantity = (products, id) => {
     return products.map((product) =>
         product.id === id ? { ...product, quantity: product.quantity + 1.0 } : product

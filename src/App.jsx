@@ -63,29 +63,27 @@ function App() {
       const updatedProducts = prevProducts.map((product) =>
         product.id === id ? { ...product, quantity: newQuantity } : product
       );
-
-      const updatedProduct = updatedProducts.find((product) => product.id === id);
-
-      // Actualizar summaryProducts
-      setSummaryProducts((prevSummaryProducts) => {
-        if (newQuantity > 0) {
-          const existingProduct = prevSummaryProducts.find((p) => p.id === id);
-          if (existingProduct) {
-            // Actualizar la cantidad del producto existente
-            return prevSummaryProducts.map((p) =>
-              p.id === id ? { ...p, quantity: newQuantity } : p
-            );
-          } else {
-            // Agregar nuevo producto al resumen
-            return [...prevSummaryProducts, { ...updatedProduct }];
-          }
-        } else {
-          // Eliminar producto del resumen si la cantidad es 0
-          return prevSummaryProducts.filter((p) => p.id !== id);
-        }
-      });
-
+      updateSummaryProducts(id, newQuantity, updatedProducts);
       return updatedProducts;
+    });
+  };
+
+  const updateSummaryProducts = (id, newQuantity, updatedProducts) => {
+    const updatedProduct = updatedProducts.find((product) => product.id === id);
+
+    setSummaryProducts((prevSummaryProducts) => {
+      if (newQuantity > 0) {
+        const existingProduct = prevSummaryProducts.find((p) => p.id === id);
+        if (existingProduct) {
+          return prevSummaryProducts.map((p) =>
+            p.id === id ? { ...p, quantity: newQuantity } : p
+          );
+        } else {
+          return [...prevSummaryProducts, { ...updatedProduct }];
+        }
+      } else {
+        return prevSummaryProducts.filter((p) => p.id !== id);
+      }
     });
   };
 
