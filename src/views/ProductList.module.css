@@ -12,36 +12,89 @@
     display: flex;
     flex: 1 1 calc(25% - 30px);
     height: 550px;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .card {
     align-items: center;
+    background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    justify-content: center;
     max-width: 300px;
+    min-height: 450px;
     padding: 10px;
     position: relative;
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2),
+        0 16px 24px rgba(0, 0, 0, 0.2),
+        0 24px 48px rgba(0, 0, 0, 0.2),
+        0 32px 64px rgba(0, 0, 0, 0.2);
+}
+
+.productCardContainer .card {
+    box-shadow: 0 8px 16px rgba(0, 0, 2, 0.2),
+        0 16px 24px rgba(4, 2, 0, 0.2),
+        0 24px 48px rgba(0, 2, 0, 0.2),
+        0 32px 64px rgba(2, 0, 0, 0.2);
+}
+
+.card .productQuantity {
+    color: midnightblue;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+
+    /* Centrar horizontalmente */
 }
 
 .cardMedia {
+    align-items: center;
     border-radius: 5px;
-    height: auto;
-    object-fit: cover;
+    display: flex;
+    height: 150px;
+    object-fit: contain;
     width: 100%;
+
+    /* Centrar horizontalmente */
+    /* Centrar horizontalmente */
 }
 
 .cardMedia img {
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     width: 100%;
+
+    /* Asegurar que la imagen no se corte */
+}
+
+.productNameOverlay {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    background: none;
+    border-radius: 5px;
+    display: -webkit-box;
+    font-size: 1rem;
+    font-weight: bold;
+    left: 10px;
+    line-clamp: 1;
+    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    top: 10px;
 }
 
 .cardContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    justify-content: center;
     text-align: center;
+    width: 100%;
 }
 
 .productDetails {
@@ -50,11 +103,17 @@
     width: 100%;
 }
 
-.productName {
+.card .productName {
+    display: inline-block;
     font-size: 1rem;
     font-weight: bold;
     margin-top: 10px;
+    max-width: 50ch;
+    overflow: hidden;
     text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 14rem;
 }
 
 .productQuantity {
@@ -62,11 +121,13 @@
 }
 
 .overlay {
-    bottom: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
     box-sizing: border-box;
     color: white;
     display: none;
-    left: 50%;
+    height: 100%;
+    left: 0;
     padding: 10px;
     position: absolute;
     text-align: center;
@@ -101,14 +162,29 @@
     padding: 8px;
 }
 
+.addButton {
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.addButton:hover {
+    background-color: #45a049;
+}
+
 @media (max-width: 575.98px) {
     .card {
         height: 550px;
         max-width: 100px;
+        min-height: 550px;
     }
 
-    .cardMedia {
-        height: 175px;
+    .cardMedia img {
+        height: auto;
     }
 
     .productName {
@@ -137,6 +213,7 @@
     .card {
         height: 550px;
         max-width: 100%;
+        min-height: 550px;
         width: 100%;
     }
 
@@ -148,20 +225,16 @@
         font-size: 0.9rem;
     }
 
-    .cardMedia img {
-        height: 196px;
-        object-fit: contain;
-        width: 100%;
-    }
-
     .cardMedia {
-        height: 175px;
+        object-fit: cover;
+        width: 100%;
     }
 }
 
 @media (max-width: 375px) {
     .card {
         height: 550px;
+        min-height: 550px;
     }
 
     .cardMedia {
@@ -185,12 +258,13 @@
     .card {
         height: 550px;
         max-width: 100%;
+        min-height: 550px;
         width: 100%;
     }
 
     .cardMedia img {
-        height: 235px;
-        object-fit: contain;
+        height: auto;
+        object-fit: fit;
         width: 100%;
     }
 }
@@ -203,12 +277,13 @@
     .card {
         height: 550px;
         max-width: 100%;
+        min-height: 550px;
         width: 100%;
     }
 
     .cardMedia img {
-        height: 294px;
-        object-fit: contain;
+        height: auto;
+        object-fit: fit;
         width: 100%;
     }
 }
@@ -221,12 +296,147 @@
     .card {
         height: 550px;
         max-width: 100%;
+        min-height: 550px;
         width: 100%;
     }
 
     .cardMedia img {
-        height: 392px;
-        object-fit: contain;
+        height: auto;
+        object-fit: cover;
         width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .card {
+        min-height: 550px;
+    }
+
+    .cardMedia {
+        height: auto;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productItemWrapper {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+        min-height: 550px;
+    }
+
+    .cardMedia {
+        height: 180px;
+    }
+
+    .productName {
+        font-size: 0.7rem;
+    }
+
+    .productQuantity {
+        font-size: 0.9rem;
+    }
+
+    .productItemWrapper {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .card {
+        min-height: 550px;
+    }
+
+    .cardMedia {
+        height: 210px;
+    }
+
+    .productName {
+        font-size: 0.8rem;
+    }
+
+    .productQuantity {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card {
+        min-height: 550px;
+    }
+
+    .cardMedia {
+        height: 262.5px;
+    }
+
+    .productName {
+        font-size: 0.9rem;
+    }
+
+    .productQuantity {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        min-height: 550px;
+    }
+
+    .cardMedia {
+        height: 350px;
+    }
+
+    .productName {
+        font-size: 1rem;
+    }
+
+    .productQuantity {
+        font-size: 1.2rem;
+    }
+}
+
+@media print {
+    .card {
+        border: 1px solid #000;
+        height: 550px;
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+    }
+
+    .cardMedia {
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+        width: 100%;
+    }
+
+    .cardContent {
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .productDetails {
+        flex-grow: 1;
     }
 }
