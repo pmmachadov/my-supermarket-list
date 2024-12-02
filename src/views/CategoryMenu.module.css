@@ -26,10 +26,17 @@
     z-index: 1301;
 }
 
-.listItem {
-    padding-bottom: 4px;
-    padding-top: 4px;
+.listItem .listItemText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
+
 
 .drawerPaper .resetButton {
     background-color: red;
