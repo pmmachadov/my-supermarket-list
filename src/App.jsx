@@ -157,7 +157,7 @@ function App() {
               onClick={ handleToggleMenu }
               className={ styles.menuButton }
             >
-              <MenuIcon />
+              <MenuIcon fontSize="inherit" />
             </IconButton>
             <Typography variant="h6" className={ styles.title }>
               { selectedCategory || 'Caseta de Cristian' }
@@ -185,8 +185,8 @@ function App() {
                   fontWeight: 'bold',
                   borderRadius: '0.4rem',
                   backgroundColor: 'rgba(118 12 122 / 0.8)',
-                  marginLeft: '1rem',
-                  padding: '0.7rem',
+                  margin: '1rem',
+                  padding: '1.3rem',
                 } }
               >
                 Resumen

@@ -91,7 +91,8 @@
     width: 100%;
 }
 
-.menuButton {
+.toolbar .menuButton {
+    font-size: 4rem;
     margin-right: 16px;
 }
 
