@@ -6,6 +6,8 @@
     justify-content: center;
     margin: 8rem auto;
     padding: 20px;
+    width: auto;
+    padding-top: 4rem;
 }
 
 .productItemWrapper {
@@ -193,11 +195,6 @@
 
     .productQuantity {
         font-size: 0.9rem;
-    }
-
-    .productListContainer {
-        padding: 0;
-        width: auto;
     }
 }
 
