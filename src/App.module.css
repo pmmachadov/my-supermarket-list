@@ -110,8 +110,8 @@
 
 .productContainer {
     display: flex;
-    flex-wrap: wrap;
     flex-grow: 1;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     max-width: 1200px;
@@ -173,7 +173,6 @@
     margin-left: 3rem;
     width: 100%;
 }
-
 
 /* Media queries */
 @media (max-width: 575.98px) {
