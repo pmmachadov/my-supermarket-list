@@ -18,7 +18,7 @@ import { Category as CategoryIcon, Refresh as RefreshIcon } from '@mui/icons-mat
 import PropTypes from 'prop-types';
 import styles from './CategoryMenu.module.css';
 
-const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
+const CategoryMenu = ({ selectedCategory, onSelectCategory, open, onClose, onResetProducts }) => {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     const handleOpenDialog = () => {
@@ -119,7 +119,6 @@ const CategoryMenu = ({ products, selectedCategory, onSelectCategory, open, onCl
 };
 
 CategoryMenu.propTypes = {
-    products: PropTypes.arrayOf(PropTypes.object).isRequired,
     selectedCategory: PropTypes.string,
     onSelectCategory: PropTypes.func.isRequired,
     open: PropTypes.bool.isRequired,
