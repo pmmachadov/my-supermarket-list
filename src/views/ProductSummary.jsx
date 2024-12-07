@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Button, Box } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
@@ -7,7 +7,23 @@ import handlePrint from './handlePrint';
 import styles from './ProductSummary.module.css';
 
 const ProductSummary = ({ products, onGoHome }) => {
-    const filteredProducts = products.filter(product => product.quantity > 0);
+    useEffect(() => {
+        const checkAriaHidden = (element) => {
+            let currentElement = element;
+            while (currentElement) {
+                if (currentElement.getAttribute && currentElement.getAttribute('aria-hidden') === 'true') {
+                    console.warn('An ancestor of the focused element has aria-hidden set to true.');
+                    break;
+                }
+                currentElement = currentElement.parentElement;
+            }
+        };
+
+        const focusedElement = document.activeElement;
+        if (focusedElement) {
+            checkAriaHidden(focusedElement);
+        }
+    }, []);
 
     return (
         <div id="product-summary" className={ styles.summaryContainer }>
@@ -36,7 +52,7 @@ const ProductSummary = ({ products, onGoHome }) => {
             </div>
 
             <Box className={ styles.cardContainer }>
-                { filteredProducts.map((product) => (
+                { products.map((product) => (
                     <Box className={ styles.card } key={ product.id }>
                         <div className={ styles.cardMedia }>
                             <img src={ encodeURI(`/${product.image}`) } alt={ product.name } className={ styles.productImage } />
