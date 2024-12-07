@@ -12,9 +12,23 @@ import {
   Button,
   Fab,
   Box,
+  Slide,
+  useScrollTrigger
 } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon, ArrowUpward as ArrowUpwardIcon } from '@mui/icons-material';
 import styles from './App.module.css';
+
+// Nuevo componente HideOnScroll
+function HideOnScroll(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={ false } direction="down" in={ !trigger }>
+      { children }
+    </Slide>
+  );
+}
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -138,52 +152,54 @@ function App() {
         onResetProducts={ handleResetProducts }
       />
       <main className={ styles.mainContent }>
-        <AppBar position="fixed" className={ styles.appBarContent }>
-          <Toolbar className={ styles.toolbar }>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={ handleToggleMenu }
-              className={ styles.menuButton }
-            >
-              <MenuIcon fontSize="inherit" />
-            </IconButton>
-            <Typography variant="h6" className={ styles.title }>
-              { selectedCategory || 'Caseta de Cristian' }
-            </Typography>
-            <div className={ styles.search }>
-              <div className={ styles.searchIcon }>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search products…"
-                classes={ {
-                  root: styles.inputRoot,
-                  input: styles.inputInput,
-                } }
-                value={ searchQuery }
-                onChange={ (e) => setSearchQuery(e.target.value) }
-                inputProps={ { 'aria-label': 'search' } }
-              />
-            </div>
-            <div>
-              <Button
+        <HideOnScroll>
+          <AppBar position="fixed" className={ styles.appBarContent }>
+            <Toolbar className={ styles.toolbar }>
+              <IconButton
                 color="inherit"
-                onClick={ handleShowSummary }
-                style={ {
-                  fontWeight: 'bold',
-                  borderRadius: '0.4rem',
-                  backgroundColor: 'rgba(118 12 122 / 0.8)',
-                  margin: '1rem',
-                  padding: '1.3rem',
-                } }
+                aria-label="open drawer"
+                edge="start"
+                onClick={ handleToggleMenu }
+                className={ styles.menuButton }
               >
-                Resumen
-              </Button>
-            </div>
-          </Toolbar>
-        </AppBar>
+                <MenuIcon fontSize="inherit" />
+              </IconButton>
+              <Typography variant="h6" className={ styles.title }>
+                { selectedCategory || 'Caseta de Cristian' }
+              </Typography>
+              <div className={ styles.search }>
+                <div className={ styles.searchIcon }>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search products…"
+                  classes={ {
+                    root: styles.inputRoot,
+                    input: styles.inputInput,
+                  } }
+                  value={ searchQuery }
+                  onChange={ (e) => setSearchQuery(e.target.value) }
+                  inputProps={ { 'aria-label': 'search' } }
+                />
+              </div>
+              <div>
+                <Button
+                  color="inherit"
+                  onClick={ handleShowSummary }
+                  style={ {
+                    fontWeight: 'bold',
+                    borderRadius: '0.4rem',
+                    backgroundColor: 'rgba(118 12 122 / 0.8)',
+                    margin: '1rem',
+                    padding: '1.3rem',
+                  } }
+                >
+                  Resumen
+                </Button>
+              </div>
+            </Toolbar>
+          </AppBar>
+        </HideOnScroll>
         <div className={ styles.productContainer }>
           { showSummary ? (
             <ProductSummary
