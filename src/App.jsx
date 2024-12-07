@@ -22,10 +22,7 @@ function App() {
     const storedProducts = localStorage.getItem('products');
     return storedProducts ? JSON.parse(storedProducts) : initialProducts;
   });
-  const [summaryProducts, setSummaryProducts] = useState(() => {
-    const storedSummaryProducts = localStorage.getItem('summaryProducts');
-    return storedSummaryProducts ? JSON.parse(storedSummaryProducts) : [];
-  });
+  const [summaryProducts, setSummaryProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSummary, setShowSummary] = useState(false);
@@ -44,6 +41,7 @@ function App() {
   };
 
   const handleShowSummary = () => {
+    handleAddToSummary();
     setShowSummary(true);
   };
 
@@ -95,19 +93,12 @@ function App() {
     );
   };
 
-  const handleAddToSummary = (product) => {
-    setSummaryProducts((prevSummaryProducts) => {
-      const existingProduct = prevSummaryProducts.find((p) => p.id === product.id);
-      if (existingProduct) {
-        // Actualizar la cantidad del producto existente
-        return prevSummaryProducts.map((p) =>
-          p.id === product.id ? { ...p, quantity: product.quantity } : p
-        );
-      } else {
-        // Añadir nuevo producto al resumen
-        return [...prevSummaryProducts, { ...product }];
-      }
-    });
+  const handleAddToSummary = () => {
+    const allProductsWithQuantities = products.map((product) => ({
+      ...product,
+      quantity: product.quantity || 0,
+    }));
+    setSummaryProducts(allProductsWithQuantities);
   };
 
   const checkScrollTop = () => {
@@ -140,7 +131,6 @@ function App() {
   return (
     <div className={ styles.appContainer }>
       <CategoryMenu
-        products={ products }
         selectedCategory={ selectedCategory }
         onSelectCategory={ handleSelectCategory }
         open={ isMenuOpen }
