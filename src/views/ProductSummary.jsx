@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Button, Box } from '@mui/material';
-import GetAppIcon from '@mui/icons-material/GetApp';
-import HomeIcon from '@mui/icons-material/Home';
-import handlePrint from './handlePrint';
-import styles from './ProductSummary.module.css';
+import GetAppIcon from '@mui/icons-material/GetApp'; // Importa el icono GetApp
+import HomeIcon from '@mui/icons-material/Home'; // Importa el icono Home
+import { Box, Button, Typography } from '@mui/material'; // Importa componentes de Material UI
+import PropTypes from 'prop-types'; // Importa PropTypes para validar las propiedades del componente
+import React, { useEffect } from 'react'; // Importa React y el hook useEffect
+import handlePrint from './handlePrint'; // Importa la función handlePrint
+import styles from './ProductSummary.module.css'; // Importa los estilos CSS específicos para este componente
 
+// Definimos el componente funcional 'ProductSummary' y desestructuramos las propiedades que recibirá
 const ProductSummary = ({ products, onGoHome }) => {
+    // useEffect para verificar si el elemento enfocado tiene un ancestro con aria-hidden=true
     useEffect(() => {
         const checkAriaHidden = (element) => {
             let currentElement = element;
@@ -21,62 +23,58 @@ const ProductSummary = ({ products, onGoHome }) => {
 
         const focusedElement = document.activeElement;
         if (focusedElement) {
-            checkAriaHidden(focusedElement);
+            checkAriaHidden(focusedElement); // Verifica si el elemento enfocado tiene un ancestro con aria-hidden=true
         }
-    }, []);
+    }, []); // El array vacío como segundo argumento asegura que este efecto se ejecute solo una vez después del primer renderizado
 
     return (
-        <div id="product-summary" className={ styles.summaryContainer }>
-            <Typography variant="h4" className={ styles.title }>
+        // Contenedor principal con una clase CSS personalizada
+        <Box className={styles.productSummaryContainer}>
+            {/* Título del resumen de productos */}
+            <Typography variant="h4" className={styles.title}>
                 Resumen de Productos
             </Typography>
-
-            <div className={ styles.buttonContainer }>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    startIcon={ <GetAppIcon /> }
-                    onClick={ handlePrint }
-                    className={ styles.commonButton }
-                >
-                    Descargar Lista
-                </Button>
-                <Button
-                    variant="contained"
-                    startIcon={ <HomeIcon /> }
-                    onClick={ onGoHome }
-                    className={ `${styles.commonButton} ${styles.homeButton}` }
-                >
-                    Inicio
-                </Button>
-            </div>
-
-            <Box className={ styles.cardContainer }>
-                { products.map((product) => (
-                    <Box className={ styles.card } key={ product.id }>
-                        <div className={ styles.cardMedia }>
-                            <img src={ encodeURI(`/${product.image}`) } alt={ product.name } className={ styles.productImage } />
-                        </div>
-                        <div className={ styles.productDetails }>
-                            <div className={ styles.productName }>{ product.name }</div>
-                            <div className={ styles.productQuantity }>{ product.quantity } { product.unitType }</div>
-                        </div>
+            {/* Lista de productos */}
+            <Box className={styles.productList}>
+                {products.map((product) => (
+                    <Box key={product.id} className={styles.productItem}>
+                        <Typography variant="body1">{product.name}</Typography>
+                        <Typography variant="body2">Cantidad: {product.quantity}</Typography>
                     </Box>
-                )) }
+                ))}
             </Box>
-        </div>
+            {/* Botón para imprimir el resumen */}
+            <Button
+                variant="contained"
+                color="primary"
+                startIcon={<GetAppIcon />}
+                onClick={handlePrint}
+                className={styles.printButton}
+            >
+                Imprimir
+            </Button>
+            {/* Botón para volver a la página principal */}
+            <Button
+                variant="contained"
+                color="secondary"
+                startIcon={<HomeIcon />}
+                onClick={onGoHome}
+                className={styles.homeButton}
+            >
+                Volver a Inicio
+            </Button>
+        </Box>
     );
 };
 
+// Definición de PropTypes para validar las propiedades del componente
 ProductSummary.propTypes = {
     products: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        quantity: PropTypes.number.isRequired,
-        unitType: PropTypes.string.isRequired,
+        quantity: PropTypes.number.isRequired
     })).isRequired,
-    onGoHome: PropTypes.func.isRequired,
+    onGoHome: PropTypes.func.isRequired
 };
 
 export default ProductSummary;
