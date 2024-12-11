@@ -11,12 +11,14 @@ import {
   Typography,
   useScrollTrigger
 } from '@mui/material';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import styles from './App.module.css';
 import initialProducts from './models/ProductModel';
 import CategoryMenu from './views/CategoryMenu';
 import ProductList from './views/ProductList';
 import ProductSummary from './views/ProductSummary';
+
 
 
 function HideOnScroll(props) {
@@ -234,3 +236,8 @@ function App() {
 }
 
 export default App;
+
+HideOnScroll.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
